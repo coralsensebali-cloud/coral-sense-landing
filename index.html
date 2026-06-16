@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Coral Sense — Coral Restoration Internships in Bali</title>
+<meta name="description" content="Join a real coral restoration internship in East Bali. Two formats — open to any background, or a deeper research track for marine biology students. Coral Triangle." />
+<meta name="theme-color" content="#f5f1ec" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{
+  --cream:#f5f1ec;--cream-soft:#ebe5dc;--ink:#0d1b2a;--ink-soft:#2a3a4a;
+  --coral:#c75b3a;--coral-h:#b04d2e;--deep:#0b1c2c;--sand:#d9cfc0;
+  --line:rgba(13,27,42,.10);--line-d:rgba(245,241,236,.12);
+  --r:3px;--pad:clamp(20px,5vw,48px);--sec:clamp(70px,10vw,110px);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Inter","Helvetica Neue",sans-serif;background:var(--cream);color:var(--ink);line-height:1.62;font-size:clamp(15px,1.5vw,17px);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+.serif{font-family:"Georgia","Times New Roman",serif;font-weight:400}
+h1,h2{font-weight:700;letter-spacing:-.022em;line-height:1.08}
+h1{font-size:clamp(2.4rem,7.5vw,5.8rem)}
+h2{font-size:clamp(1.8rem,4.6vw,3.1rem);margin-bottom:.55em}
+h3{font-size:clamp(1.15rem,2.4vw,1.55rem);font-weight:600;line-height:1.2;letter-spacing:-.01em}
+h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.22em;font-weight:700}
+p{margin-bottom:1em;max-width:65ch}p:last-child{margin-bottom:0}
+ul{padding-left:1.25em}li{margin-bottom:.45em}
+.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.26em;font-weight:700;color:var(--coral);display:block;margin-bottom:1.3rem}
+.dark .eyebrow{color:#e3a882}
+.lead{font-size:clamp(1rem,2vw,1.18rem);line-height:1.58;color:var(--ink-soft);max-width:58ch}
+.dark .lead{color:rgba(245,241,236,.76)}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.narrow{max-width:740px;margin:0 auto;padding:0 var(--pad)}
+section{padding:var(--sec) 0;border-bottom:1px solid var(--line)}
+section.dark{background:var(--deep);color:var(--cream);border-color:var(--line-d)}
+section.soft{background:var(--cream-soft)}
+section.flush{padding:0;border:none}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px)}
+@media(max-width:860px){.two-col{grid-template-columns:1fr}}
+.two-col h3{margin-bottom:14px}.two-col ul{font-size:.92rem}.two-col li{margin-bottom:7px;line-height:1.5}
+.section-intro{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(20px,4vw,80px);align-items:start;margin-bottom:clamp(40px,6vw,64px)}
+@media(max-width:860px){.section-intro{grid-template-columns:1fr;gap:14px}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:999px;font-weight:600;font-size:.92rem;border:2px solid transparent;cursor:pointer;transition:all .2s;white-space:nowrap;text-align:center}
+.btn-primary{background:var(--coral);color:#fff;border-color:var(--coral)}
+.btn-primary:hover{background:var(--coral-h);transform:translateY(-1px);box-shadow:0 4px 18px rgba(199,91,58,.28)}
+.btn-ghost{background:transparent;color:var(--cream);border-color:rgba(245,241,236,.38)}
+.btn-ghost:hover{border-color:var(--cream);background:rgba(245,241,236,.07)}
+.btn-dark{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btn-dark:hover{background:var(--coral);border-color:var(--coral)}
+.btn-outline{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-outline:hover{background:var(--ink);color:var(--cream)}
+.btn-full{width:100%;justify-content:center}
+.nav{position:sticky;top:0;z-index:100;background:rgba(245,241,236,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad);height:62px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:800;font-size:.88rem;letter-spacing:.14em;text-transform:uppercase}
+.nav-links{display:flex;gap:26px;font-size:.84rem}
+.nav-links a{color:var(--ink-soft);font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--coral)}
+@media(max-width:880px){.nav-links{display:none}}
+/* HERO */
+.hero{position:relative;min-height:95vh;min-height:95svh;display:flex;align-items:flex-end;overflow:hidden;background:#0a1a2a}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(168deg,rgba(11,28,44,.05) 0%,rgba(11,28,44,.28) 48%,rgba(11,28,44,.96) 100%)}
+.hero-content{position:relative;z-index:2;color:var(--cream);padding:0 var(--pad) clamp(60px,8vw,96px);max-width:1320px;margin:0 auto;width:100%}
+.hero-eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.3em;font-weight:600;opacity:.62;display:block;margin-bottom:clamp(16px,2.5vw,26px)}
+.hero h1{font-family:"Georgia",serif;font-weight:400;font-size:clamp(2.6rem,8vw,6.2rem);line-height:1.0;letter-spacing:-.025em;max-width:14ch;margin-bottom:clamp(18px,2.5vw,28px)}
+.hero .sub{font-size:clamp(1rem,2.2vw,1.18rem);opacity:.84;max-width:52ch;margin-bottom:clamp(28px,4vw,42px);line-height:1.55}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+/* MARQUEE GRID */
+.marquee-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;padding:6px;background:var(--cream)}
+.marquee-grid img{width:100%;height:100%;object-fit:cover}
+.marquee-grid .m1{grid-column:1;grid-row:1/span 2;aspect-ratio:1/1.08}
+.marquee-grid .m2{grid-column:2;grid-row:1;aspect-ratio:1}
+.marquee-grid .m3{grid-column:3;grid-row:1;aspect-ratio:1}
+.marquee-grid .m4{grid-column:2;grid-row:2;aspect-ratio:1}
+.marquee-grid .m5{grid-column:3;grid-row:2;aspect-ratio:1}
+@media(max-width:700px){.marquee-grid{grid-template-columns:1fr 1fr}.marquee-grid .m1{grid-column:1/span 2;grid-row:1;aspect-ratio:16/9}.marquee-grid .m2{grid-column:1;grid-row:2}.marquee-grid .m3{grid-column:2;grid-row:2}.marquee-grid .m4,.marquee-grid .m5{display:none}}
+/* STATS */
+.stats-bar{background:var(--ink);padding:22px var(--pad);border:none}
+.stats-bar-inner{max-width:1320px;margin:0 auto;display:flex;gap:clamp(20px,5vw,60px);align-items:center;justify-content:center;flex-wrap:wrap}
+.stat{text-align:center}.stat-n{font-size:clamp(1.1rem,2.5vw,1.65rem);font-weight:800;color:#e3a882;display:block;line-height:1}
+.stat-l{font-size:.68rem;text-transform:uppercase;letter-spacing:.18em;opacity:.55;display:block;margin-top:5px;color:var(--cream)}
+/* PROGRAM CARDS */
+.prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.5vw,28px)}
+@media(max-width:760px){.prog-grid{grid-template-columns:1fr}}
+.pcard{border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s}
+.pcard:hover{box-shadow:0 10px 44px rgba(13,27,42,.1);transform:translateY(-3px)}
+.pcard-img{aspect-ratio:16/10;overflow:hidden}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.pcard:hover .pcard-img img{transform:scale(1.04)}
+.pcard-body{padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;flex:1}
+.pcard-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.2em;color:var(--coral);font-weight:700;margin-bottom:12px}
+.pcard h3{margin-bottom:10px;font-size:clamp(1.15rem,2vw,1.48rem)}
+.pcard>.pcard-body>p{font-size:.92rem;color:var(--ink-soft)}
+.pcard-badges{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 20px}
+.badge{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);background:var(--cream-soft);padding:4px 12px;border-radius:999px}
+.pcard-price{margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
+.pcard-price .amt{font-size:1.55rem;font-weight:800}.pcard-price .per{font-size:.84rem;color:var(--ink-soft)}
+.pcard-price small{display:block;font-size:.76rem;color:var(--ink-soft);margin:4px 0 16px}
+/* PHILOSOPHY */
+.philosophy{background:var(--deep);color:var(--cream);padding:clamp(50px,8vw,88px) var(--pad);border:none;text-align:center}
+.philosophy blockquote{font-family:"Georgia",serif;font-weight:400;font-size:clamp(1.5rem,4.2vw,2.7rem);line-height:1.28;max-width:20ch;margin:0 auto 22px}
+.philosophy p{color:rgba(245,241,236,.62);max-width:52ch;margin:0 auto;font-size:1rem}
+/* SITES */
+.site-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,36px);margin-top:clamp(36px,5vw,56px)}
+@media(max-width:800px){.site-grid{grid-template-columns:1fr}}
+.scard{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.scard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.scard-body{padding:clamp(20px,3vw,28px)}.scard h3{margin-bottom:10px}.scard p{font-size:.9rem;color:var(--ink-soft)}
+.scard-stats{list-style:none;padding:0;margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.scard-stats li{display:flex;justify-content:space-between;padding:7px 0;font-size:.86rem;border-bottom:1px solid var(--line)}
+.scard-stats li:last-child{border-bottom:none}.scard-stats .sv{font-weight:700}
+.five-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:6px}
+.five-grid img{aspect-ratio:3/4;object-fit:cover;width:100%}
+@media(max-width:700px){.five-grid{grid-template-columns:1fr 1fr}.five-grid img{aspect-ratio:1}}
+/* PROGRAM DETAIL */
+.prog{padding:clamp(80px,11vw,130px) 0}
+.prog-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:end;margin-bottom:clamp(48px,7vw,80px)}
+@media(max-width:900px){.prog-top{grid-template-columns:1fr}}
+.prog-top img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.prog-top h2{font-family:"Georgia",serif;font-weight:400;font-size:clamp(1.8rem,4.6vw,3.2rem);line-height:1.05;margin-bottom:18px}
+.prog-meta{display:flex;gap:18px;flex-wrap:wrap;font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft);font-weight:600;margin:16px 0 0}
+.prog-meta-d{color:rgba(245,241,236,.56)}
+.callout{margin:22px 0;padding:18px 22px;background:var(--cream-soft);border-left:3px solid var(--coral);border-radius:0 var(--r) var(--r) 0;font-size:.9rem;color:var(--ink-soft);line-height:1.6}
+.callout-d{background:rgba(255,255,255,.05);border-color:#e3a882;color:rgba(245,241,236,.72)}
+.dark .two-col li{color:rgba(245,241,236,.8)}.dark h3{color:var(--cream)}
+.price-box{margin-top:28px;padding:24px 28px;background:var(--cream-soft);border-radius:8px;border:1px solid var(--line)}
+.price-box .big{font-size:2.3rem;font-weight:900;line-height:1;margin-bottom:8px}
+.price-box .sub{font-size:.82rem;color:var(--ink-soft);margin-bottom:18px}
+.price-box-d{margin-top:28px;padding:24px 28px;background:rgba(255,255,255,.05);border-radius:8px;border:1px solid rgba(245,241,236,.12)}
+.price-box-d .big{font-size:2.3rem;font-weight:900;line-height:1;margin-bottom:8px;color:var(--cream)}
+.price-box-d .sub{font-size:.82rem;color:rgba(245,241,236,.5);margin-bottom:18px}
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;margin-top:clamp(36px,5vw,56px)}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.g1{grid-column:span 5;aspect-ratio:4/5}.g2{grid-column:span 7;aspect-ratio:7/5}
+.g3{grid-column:span 4;aspect-ratio:1}.g4{grid-column:span 4;aspect-ratio:1}.g5{grid-column:span 4;aspect-ratio:1}
+@media(max-width:700px){.gallery{grid-template-columns:1fr 1fr}.g1{grid-column:span 2;aspect-ratio:4/3}.g2{grid-column:span 2;aspect-ratio:4/3}.g3,.g4{grid-column:span 1}.g5{grid-column:span 2;aspect-ratio:4/3}}
+.bw{filter:grayscale(100%) contrast(1.06)}
+/* WEEKS */
+.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.5vw,28px);margin-top:40px}
+@media(max-width:880px){.weeks{grid-template-columns:1fr 1fr}}@media(max-width:480px){.weeks{grid-template-columns:1fr}}
+.wk{border-top:2px solid rgba(245,241,236,.14);padding-top:20px}
+.wk-n{font-size:3rem;font-weight:900;color:rgba(245,241,236,.1);line-height:1;margin-bottom:10px}
+.wk h4{color:#e3a882;margin-bottom:10px}.wk p{font-size:.88rem;color:rgba(245,241,236,.72);line-height:1.58}
+/* PHOTO BREAK */
+.pb{width:100%;aspect-ratio:21/8;object-fit:cover;display:block}
+@media(max-width:700px){.pb{aspect-ratio:16/9}}
+/* CORAL HOUSE */
+.house-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:7px;margin-top:40px}
+.house-grid img{width:100%;height:100%;object-fit:cover}
+.house-grid .hm{grid-column:1;grid-row:1/span 2;aspect-ratio:1/1.08}.house-grid .hs{aspect-ratio:1}
+@media(max-width:700px){.house-grid{grid-template-columns:1fr 1fr}.house-grid .hm{grid-column:1/span 2;grid-row:1;aspect-ratio:16/9}}
+/* COMMUNITY ROW */
+.community-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:clamp(30px,4vw,48px)}
+.community-row img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r)}
+@media(max-width:600px){.community-row{grid-template-columns:1fr 1fr}}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3.5vw,44px);margin-top:clamp(36px,5vw,52px)}
+@media(max-width:680px){.steps{grid-template-columns:1fr;gap:28px}}
+.step-n{font-size:3.8rem;font-weight:900;color:var(--cream-soft);line-height:1;margin-bottom:12px}
+.step h3{margin-bottom:10px}.step p{font-size:.9rem;color:var(--ink-soft)}
+.step-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);margin-bottom:20px;display:block}
+/* FORM */
+.form-card{background:#fff;border-radius:10px;padding:clamp(26px,4vw,48px);box-shadow:0 2px 44px rgba(13,27,42,.08);margin-top:clamp(34px,5vw,48px);max-width:700px;margin-left:auto;margin-right:auto}
+.fg{margin-bottom:22px}
+.fl{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--ink-soft);margin-bottom:10px}
+.fl span{color:var(--coral)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill-o{display:inline-block;padding:8px 17px;border-radius:999px;border:1.5px solid var(--sand);background:#fff;cursor:pointer;font-size:.84rem;font-weight:500;color:var(--ink-soft);transition:all .15s;user-select:none}
+.pill-o:hover{border-color:var(--coral);color:var(--coral)}.pill-o.on{background:var(--coral);border-color:var(--coral);color:#fff}
+.pill-o input{position:absolute;opacity:0;pointer-events:none}
+.fi{width:100%;padding:12px 16px;border:1.5px solid var(--sand);border-radius:7px;font-size:.95rem;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .15s;appearance:none}
+.fi:focus{outline:none;border-color:var(--coral)}textarea.fi{resize:vertical;min-height:90px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:520px){.f-row{grid-template-columns:1fr}}
+.f-submit{width:100%;padding:16px;font-size:1rem;border-radius:999px;border:none;background:var(--coral);color:#fff;font-weight:700;cursor:pointer;transition:all .2s;margin-top:6px;letter-spacing:.02em;font-family:inherit}
+.f-submit:hover{background:var(--coral-h);transform:translateY(-1px);box-shadow:0 5px 22px rgba(199,91,58,.28)}
+.f-note{font-size:.76rem;color:var(--ink-soft);margin-top:12px;text-align:center;opacity:.65}
+.f-success{display:none;text-align:center;padding:48px 20px}
+.f-success .ico{font-size:3rem;margin-bottom:14px}.f-success h3{margin-bottom:10px}
+.f-success p{color:var(--ink-soft);max-width:42ch;margin:0 auto}
+/* FAQ */
+.faq{max-width:760px;margin-top:clamp(28px,4vw,48px)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;padding:20px 0;background:none;border:none;cursor:pointer;font-size:.98rem;font-weight:600;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:inherit}
+.faq-plus{font-size:1.25rem;color:var(--coral);transition:transform .2s;flex-shrink:0}
+.faq-q[aria-expanded="true"] .faq-plus{transform:rotate(45deg)}
+.faq-a{display:none;padding-bottom:20px;font-size:.9rem;color:var(--ink-soft);line-height:1.65}
+/* CONTACT & FOOTER */
+.c-strip{background:var(--ink);color:var(--cream);padding:clamp(50px,7vw,80px) var(--pad);border:none;text-align:center}
+.c-strip h2{color:var(--cream);margin-bottom:10px}.c-strip .lead{color:rgba(245,241,236,.62);margin:0 auto 32px}
+.c-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.c-links{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;font-size:.84rem;color:rgba(245,241,236,.48)}
+.c-links a:hover{color:var(--cream)}
+footer{background:var(--deep);color:rgba(245,241,236,.42);padding:26px var(--pad);font-size:.76rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+footer a:hover{color:var(--cream)}
+/* WHATSAPP */
+.wa{position:fixed;bottom:24px;right:24px;z-index:500;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 22px rgba(37,211,102,.38);transition:transform .2s,box-shadow .2s}
+.wa:hover{transform:scale(1.09);box-shadow:0 6px 30px rgba(37,211,102,.5)}
+.tag-pill{display:inline-block;padding:4px 14px;border-radius:999px;border:1px solid var(--sand);font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;font-weight:700;color:var(--ink-soft);margin-bottom:16px}
+.dark .tag-pill{border-color:rgba(245,241,236,.2);color:rgba(245,241,236,.5)}
+</style>
+</head>
+<body>
+
+<a class="wa" href="https://wa.me/6281248368288?text=Hello%20Coral%20Sense%2C%20I%27m%20interested%20in%20your%20internship%20programs." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">Coral Sense</div>
+    <div class="nav-links">
+      <a href="#programs">Programs</a><a href="#sites">Our Sites</a>
+      <a href="#discovery">Discovery</a><a href="#research">Research</a>
+      <a href="#coral-house">Coral House</a><a href="#faq">FAQ</a>
+    </div>
+    <a href="#apply" class="btn btn-primary" style="padding:9px 22px;font-size:.84rem;">Apply Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <img src="assets/editable/hero-main.jpg" alt="Diver restoring corals in Bali ocean" class="hero-img" />
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Coral Sense · East Bali · Coral Triangle</span>
+    <h1 class="serif">The ocean is not broken.<br/>Our relationship with it is.</h1>
+    <p class="sub">Join a living coral restoration project in Bali. Two formats — one open to anyone with curiosity and care, one deeper research track for marine biology students.</p>
+    <div class="hero-btns">
+      <a href="#apply" class="btn btn-primary">Apply Now</a>
+      <a href="#programs" class="btn btn-ghost">Explore Programs</a>
+    </div>
+  </div>
+</header>
+
+<!-- PHOTO MARQUEE — 5 фото -->
+<section class="flush">
+  <div class="marquee-grid">
+    <!-- p-m1.jpg: фото 1 (B&W дайвер с ящиком) -->
+    <img src="assets/editable/field-1.jpg" alt="Diver over coral reef" class="m1" />
+    <!-- p-m2.jpg: фото 16 (черепаха) -->
+    <img src="assets/editable/field-2.jpg" alt="Turtle at coral restoration structure" class="m2" />
+    <!-- p-m3.jpg: фото 8 (девушка сажает кораллы) -->
+    <img src="assets/editable/field-3.jpg" alt="Diver planting corals" class="m3" />
+    <!-- p-m4.jpg: фото 15 (золотой закат) -->
+    <img src="assets/editable/closing-1.jpg" alt="Sunset over Bali bay" class="m4" />
+    <!-- p-m5.jpg: фото 20 (команда в гидрокостюмах) -->
+    <img src="assets/editable/field-4.jpg" alt="Coral Sense team" class="m5" />
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat"><span class="stat-n">500,000+</span><span class="stat-l">Corals Restored</span></div>
+    <div class="stat"><span class="stat-n">8,000 m²</span><span class="stat-l">Seafloor Restored</span></div>
+    <div class="stat"><span class="stat-n">2 Sites</span><span class="stat-l">Amed &amp; Padang Bai</span></div>
+    <div class="stat"><span class="stat-n">Coral Triangle</span><span class="stat-l">Most Biodiverse Region</span></div>
+    <div class="stat"><span class="stat-n">Any Background</span><span class="stat-l">Welcome</span></div>
+  </div>
+</div>
+
+<section id="programs">
+  <div class="wrap">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Two Programs</span>
+        <h2 class="serif">One project.<br/>Two ways in.</h2>
+      </div>
+      <div>
+        <p class="lead">Both internships happen inside the same living Coral Sense project in East Bali. You become part of the team, stay in Coral House, and dive in the same ocean. What changes is the depth and focus of your involvement.</p>
+      </div>
+    </div>
+    <div class="prog-grid">
+      <div class="pcard">
+        <!-- p-disc-card.jpg: фото 18 (два дайвера, яркие кораллы, Green School) -->
+        <div class="pcard-img"><img src="assets/editable/program-discovery-card.jpg" alt="Divers working with colorful corals" /></div>
+        <div class="pcard-body">
+          <div class="pcard-tag">Program 1 · Discovery</div>
+          <h3>Coral Restoration Discovery Internship</h3>
+          <p>Open to anyone — any profession, any background, any age. One full ocean day per week. The rest of your time is yours to live East Bali at your own pace.</p>
+          <div class="pcard-badges"><span class="badge">Any background</span><span class="badge">2–4+ weeks</span><span class="badge">8 dives / month</span></div>
+          <div class="pcard-price">
+            <span class="amt">$1,100</span><span class="per"> / month</span>
+            <small>From 2 weeks · Extensions welcome</small>
+            <a href="#discovery" class="btn btn-outline btn-full">Explore Discovery →</a>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <!-- p-res-card.jpg: фото 10 (дайвер пишет заметки, синий костюм) -->
+        <div class="pcard-img"><img src="assets/editable/program-research-card.jpg" alt="Diver writing research notes underwater" /></div>
+        <div class="pcard-body">
+          <div class="pcard-tag">Program 2 · Research</div>
+          <h3>Marine Biology &amp; Research Internship</h3>
+          <p>For students and early-career participants in marine biology, conservation, and environmental science. Field practice with real academic and CV value.</p>
+          <div class="pcard-badges"><span class="badge">Marine bio students</span><span class="badge">4+ weeks</span><span class="badge">16 dives / month</span></div>
+          <div class="pcard-price">
+            <span class="amt">$1,580</span><span class="per"> / month</span>
+            <small>Minimum 4 weeks · Extensions welcome</small>
+            <a href="#research" class="btn btn-outline btn-full">Explore Research →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK — p-break1.jpg: фото 5 (команда делает survey, широкий кадр) -->
+<section class="flush">
+  <img src="assets/editable/research-gallery-1.jpg" alt="Research team conducting reef survey" class="pb" />
+</section>
+
+<div class="philosophy">
+  <blockquote>"We don't fix the ocean.<br/>We learn from it — and grow with it."</blockquote>
+  <p>Coral Sense is not only about planting corals. It's about restoring our relationship with the ocean — through curiosity, real observation, and the kind of care that only comes from being close to something alive.</p>
+</div>
+
+<section id="sites" class="soft">
+  <div class="wrap">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Our Coral Gardens</span>
+        <h2 class="serif">2 gardens.<br/>2 different approaches.</h2>
+      </div>
+      <div>
+        <p class="lead">Both programs visit both restoration sites. Each shows a different face of the ocean and a different logic of restoration. Together, they give you the full picture of how a reef lives — and what we can do for it.</p>
+      </div>
+    </div>
+    <div class="site-grid">
+      <div class="scard">
+        <!-- p-site1.jpg: фото 3 (дайвер с планшетом у коралловой структуры) -->
+        <img src="assets/editable/site-amed.jpg" alt="Coral Sense Research Garden in Amed" />
+        <div class="scard-body">
+          <span class="eyebrow" style="margin-bottom:.6rem;">Garden 01 · Amed</span>
+          <h3>Coral Sense Research Garden</h3>
+          <p>A high-stress zone: sedimentation, temperature swings, seasonal turbidity. Not a postcard reef — a living observation field for what truly survives under pressure. 10 minutes from Amed — turtles, wreck dives, freediving, Volcano Agung views.</p>
+          <ul style="margin-top:14px;font-size:.9rem;color:var(--ink-soft);">
+            <li>Science garden — underwater laboratory</li>
+            <li>Growing highly stress-resistant corals</li>
+            <li>6 simultaneous scientific experiments</li>
+            <li>Located in the Coral Triangle</li>
+            <li>AI technologies for reef monitoring</li>
+          </ul>
+        </div>
+      </div>
+      <div class="scard">
+        <!-- p-site2.jpg: фото 19 (два дайвера с ящиком с фрагментами, Padang Bai) -->
+        <img src="assets/editable/site-padang-bai.jpg" alt="Padang Bai coral restoration site" />
+        <div class="scard-body">
+          <span class="eyebrow" style="margin-bottom:.6rem;">Garden 02 · Padang Bai</span>
+          <h3>Padang Bai — Livingseas Partner Site</h3>
+          <p>The largest human-planted coral garden on Bali, built with our partners Livingseas. 500,000+ corals planted, 8,000+ m² of seafloor restored. This is where restoration at scale becomes visible.</p>
+          <ul class="scard-stats">
+            <li><span>Corals planted</span><span class="sv">500,000+</span></li>
+            <li><span>Seafloor restored</span><span class="sv">8,000+ m²</span></li>
+            <li><span>Region</span><span class="sv">Coral Triangle</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 5 underwater photos: turtle, coral colony, freediver, monitoring, love plaque -->
+    <div class="five-grid" style="margin-top:8px;">
+      <img src="assets/editable/discovery-gallery-1.jpg" alt="Coral restoration garden" style="object-position:center;" />
+      <img src="assets/editable/discovery-gallery-2.jpg" alt="Coral colony closeup" style="object-position:center top;" />
+      <img src="assets/editable/closing-2.jpg" alt="Freediver on surface" style="object-position:center top;" />
+      <img src="assets/editable/research-gallery-2.jpg" alt="Survey team underwater" style="object-position:center top;" />
+      <img src="assets/editable/video-thumb-1.jpg" alt="Coral structure with love plaque" style="object-position:center top;" />
+    </div>
+  </div>
+</section>
+
+<!-- DISCOVERY -->
+<section id="discovery" class="prog">
+  <div class="wrap">
+    <div class="prog-top">
+      <div>
+        <span class="tag-pill">Program 1 · Discovery</span>
+        <h2>Bali, with real meaning — for anyone.</h2>
+        <p class="lead">You don't need a science degree. You don't need to be a diver. You don't need to come from any particular background. This format is built for travelers, creators, marketers, photographers, students from any field — anyone who feels pulled toward the ocean.</p>
+        <div class="prog-meta"><span>From 2 weeks</span><span>·</span><span>$1,100 / month</span><span>·</span><span>Any background · Age 18+</span></div>
+        <div class="callout"><strong>How the week feels:</strong> One big ocean day per week — 2 dives, coral planting, reef care, educational session. Six days that belong to you: rest, cafés, waterfalls, your own projects, or more diving.</div>
+      </div>
+      <!-- p-disc-hero.jpg: фото 8 (девушка сажает кораллы, синий костюм) -->
+      <div><img src="assets/editable/video-thumb-2.jpg" alt="Diver planting corals on restoration structure" /></div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>Who it's for</h3>
+        <ul>
+          <li>Curious people from any profession — age 18+</li>
+          <li>Travelers who want their month in Bali to mean something</li>
+          <li>Photographers, creators, marketers, writers, students from any field</li>
+          <li>Beginner divers — and non-divers</li>
+          <li>Anyone who wants to take part, not just watch</li>
+        </ul>
+        <p style="margin-top:16px;font-size:.9rem;color:var(--ink-soft);">No marine biology experience required. We teach you everything on site.</p>
+        <h3 style="margin-top:28px;">No dive certification yet?</h3>
+        <p style="font-size:.9rem;color:var(--ink-soft);">You can complete Open Water in Bali before the program or in your first days (~$320–350). No certification? You can also help from the surface — preparing and passing coral fragments down to divers.</p>
+      </div>
+      <div>
+        <h3>What's included</h3>
+        <ul>
+          <li>8 scuba dives per month (2 per ocean day)</li>
+          <li>Coral planting, structure care &amp; guided observation</li>
+          <li>Coral Talks and marine conservation sessions every dive day</li>
+          <li>Accommodation at Coral House</li>
+          <li>1 lunch per week on dive day</li>
+          <li>Airport pickup and drop-off</li>
+          <li>Mask, fins, snorkeling gear and SUP for your stay</li>
+          <li>Coral Sense team t-shirt</li>
+          <li>Help with local logistics — cafés, extra dives, island exploration</li>
+        </ul>
+        <div class="price-box">
+          <div class="big">$1,100<span style="font-size:1.1rem;font-weight:400;color:var(--ink-soft);"> / month</span></div>
+          <div class="sub">From 2 weeks · Extensions welcome · Non-diving option available</div>
+          <a href="#apply" class="btn btn-dark btn-full">Apply for Discovery</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Discovery gallery: 5 разных фото -->
+    <div class="gallery">
+      <img src="assets/editable/disc-gal-1.jpg" alt="Coral restoration underwater" class="g1" style="object-position:center top;" />
+      <img src="assets/editable/disc-gal-2.jpg" alt="Diver at coral structure" class="g2" style="object-position:center top;" />
+      <img src="assets/editable/disc-gal-3.jpg" alt="Coral planting underwater" class="g3" style="object-position:center top;" />
+      <img src="assets/editable/disc-gal-4.jpg" alt="Reef restoration in Bali" class="g4" style="object-position:center top;" />
+      <img src="assets/editable/disc-gal-5.jpg" alt="Coral care in ocean" class="g5" style="object-position:center top;" />
+    </div>
+
+    <!-- Community row -->
+    <div class="community-row" style="margin-top:8px;">
+      <img src="assets/editable/comm-1.jpg" alt="Coral restoration team" />
+      <img src="assets/editable/comm-2.jpg" alt="Bali ocean life" />
+      <img src="assets/editable/house-atmo-3.jpg" alt="Sunset silhouette Bali" />
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK B&W — p-break2.jpg: фото 11 (B&W дайвер на больших рамах) -->
+<section class="flush">
+  <img src="assets/editable/house-atmo-4.jpg" alt="Diver at large coral restoration frames" class="pb bw" />
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="prog dark">
+  <div class="wrap">
+    <div class="prog-top">
+      <div>
+        <span class="tag-pill">Program 2 · Research</span>
+        <h2 class="serif" style="color:var(--cream);">A month that feeds your education, your CV, and how you think as a future scientist.</h2>
+        <p class="lead" style="margin-top:16px;">If you're studying marine biology, conservation, or environmental science — this is the deeper track. You dive more often, observe the reef as a system, and start to notice what used to slip past you.</p>
+        <div class="prog-meta prog-meta-d"><span>Minimum 4 weeks</span><span>·</span><span>$1,580 / month</span><span>·</span><span>Marine bio students &amp; early-career</span></div>
+        <div class="callout callout-d"><strong>What makes this different:</strong> Live experiments — substrate effects, depth variables, species competition. You learn to read a reef as a system, and how AI-assisted tools support real field research.</div>
+      </div>
+      <!-- p-res-hero.jpg: фото 10 (дайвер пишет заметки, синий костюм) - B&W -->
+      <div><img src="assets/editable/house-atmo-5.jpg" alt="Diver writing research notes" class="bw" /></div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>Who it's for</h3>
+        <ul>
+          <li>Students of marine biology, marine conservation, environmental science, ecology</li>
+          <li>Early-career participants stepping into reef restoration and marine research</li>
+          <li>Divers ready to grow from recreational diving into disciplined field observation</li>
+        </ul>
+        <h3 style="margin-top:28px;">What you'll actually learn</h3>
+        <ul>
+          <li>How a real restoration project works under operational conditions</li>
+          <li>Reef care, structure maintenance, and restoration decision logic</li>
+          <li>Photo protocols, anomaly spotting, basic monitoring methods</li>
+          <li>Coral group identification and reef dynamics observation</li>
+          <li>How AI-assisted tools support field material analysis</li>
+          <li>The difference between recreational diving and science-oriented observation</li>
+        </ul>
+        <h3 style="margin-top:28px;">Requirements</h3>
+        <ul>
+          <li>Academic or early-career background in a related field</li>
+          <li>Open Water certification (can be completed locally)</li>
+          <li>Personal laptop · Ability to ride a scooter</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What's included</h3>
+        <ul>
+          <li>16 dives in 4 weeks — restoration &amp; science-oriented</li>
+          <li>Full dive equipment</li>
+          <li>Training sessions: coral restoration, marine conservation, research thinking, AI workflows</li>
+          <li>Both gardens: Amed Research Garden + Padang Bai</li>
+          <li>Inter-site transfer · Accommodation at Coral House</li>
+          <li>2 lunches per week on dive days</li>
+          <li>Airport pickup and drop-off · Mask, fins, snorkeling gear, SUP</li>
+          <li>Coral Sense team t-shirt · Certificate of Completion</li>
+        </ul>
+        <div class="price-box-d">
+          <div class="big">$1,580<span style="font-size:1.1rem;font-weight:400;color:rgba(245,241,236,.42);"> / month</span></div>
+          <div class="sub">Minimum 4 weeks · Extensions welcome</div>
+          <a href="#apply" class="btn btn-primary btn-full">Apply for Research</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(60px,9vw,100px);">
+      <h2 class="serif" style="color:var(--cream);max-width:22ch;font-size:clamp(1.6rem,4vw,2.6rem);">How four weeks unfold.</h2>
+      <div class="weeks">
+        <div class="wk"><div class="wk-n">01</div><h4>Foundations</h4><p>Meet the project, the team, the reef, the structures. Join coral planting and reef care. Start to understand why each restoration decision is made the way it is.</p></div>
+        <div class="wk"><div class="wk-n">02</div><h4>Care &amp; Monitoring</h4><p>Structure maintenance, threats to fragments, anomaly documentation, photo protocols, early indicators of growth, survival, and recovery.</p></div>
+        <div class="wk"><div class="wk-n">03</div><h4>Data &amp; AI</h4><p>Organize observations systematically — coral groups, reef dynamics, fish. Learn how AI tools help process field materials and surface anomalies.</p></div>
+        <div class="wk"><div class="wk-n">04</div><h4>Your Own Voice</h4><p>More independent underwater. Real discussion with the team. When ready — short educational briefings during Coral Restoration Days.</p></div>
+      </div>
+    </div>
+
+    <!-- Research gallery B&W -->
+    <div class="gallery" style="margin-top:clamp(50px,7vw,80px);">
+      <img src="assets/editable/res-gal-1.jpg" alt="Diver at coral restoration structure" class="g1" style="object-position:center top;" />
+      <img src="assets/editable/res-gal-2.jpg" alt="Research dive in Bali" class="g2" style="object-position:center top;" />
+      <img src="assets/editable/res-gal-3.jpg" alt="Coral monitoring underwater" class="g3" style="object-position:center top;" />
+      <img src="assets/editable/res-gal-4.jpg" alt="Marine science field work" class="g4" style="object-position:center top;" />
+      <img src="assets/editable/res-gal-5.jpg" alt="Coral planting in ocean" class="g5" style="object-position:center top;" />
+    </div>
+  </div>
+</section>
+
+<!-- CORAL HOUSE -->
+<section id="coral-house" class="soft">
+  <div class="wrap">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Where You Live</span>
+        <h2 class="serif">Coral House.</h2>
+      </div>
+      <div>
+        <p class="lead">Not a luxury resort. Not a hostel. A calm, atmospheric base near the ocean — good for rest, laptop work, morning coffee, and the slower rhythm of East Bali life.</p>
+        <ul style="margin-top:14px;font-size:.9rem;color:var(--ink-soft);">
+          <li>Private room or dormitory depending on format and availability</li>
+          <li>Yoga space, deep pool and shared common areas · Fully equipped kitchen</li>
+          <li>10 minutes to Amed — cafés, fun dives, freediving, yoga, markets</li>
+          <li>Volcano Agung views · Lush tropical garden</li>
+        </ul>
+      </div>
+    </div>
+    <!-- House grid: main photo + 4 smaller -->
+    <div class="house-grid">
+      <!-- p-house-main.jpg: фото 6 коллаж или house-photo-01.jpg -->
+      <img src="assets/editable/house-atmo-1.jpg" alt="Coral House exterior" class="hm" />
+      <img src="assets/editable/house-room-1.jpg" alt="Private room" class="hs" />
+      <img src="assets/editable/house-room-3.jpg" alt="Sunset view" class="hs" />
+      <img src="assets/editable/house-room-2.jpg" alt="Common area" class="hs" />
+      <img src="assets/editable/house-room-4.jpg" alt="Warm room" class="hs" />
+    </div>
+    <!-- Extra house photos row -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:7px;">
+      <img src="assets/editable/house-room-6.jpg" alt="Coral House detail" style="aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:var(--r)" />
+      <img src="assets/editable/house-room-7.jpg" alt="Bali sunset" style="aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:var(--r)" />
+      <img src="assets/editable/house-room-5.jpg" alt="Sunset silhouette" style="aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:var(--r)" />
+      <img src="assets/editable/house-atmo-2.jpg" alt="House view" style="aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:var(--r)" />
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO APPLY -->
+<section>
+  <div class="wrap">
+    <div class="section-intro">
+      <div><span class="eyebrow">How It Works</span><h2 class="serif">3 simple steps.</h2></div>
+      <div><p class="lead">No long essays, no complex process.<br/>Tell us a little about yourself — we do the rest.</p></div>
+    </div>
+    <div class="steps">
+      <div class="step"><img src="assets/editable/step-1.jpg" alt="Coral House atmosphere" class="step-img" /><div class="step-n">01</div><h3>Fill in the form</h3><p>Your background, dive level, planned arrival, and email. Short and simple — under 2 minutes.</p></div>
+      <div class="step"><img src="assets/editable/step-2.jpg" alt="Team review" class="step-img" /><div class="step-n">02</div><h3>We review &amp; reply</h3><p>We check the fit, confirm availability, and write back personally within 24–48 hours.</p></div>
+      <div class="step"><img src="assets/editable/step-3.jpg" alt="Bali arrival" class="step-img" /><div class="step-n">03</div><h3>Reserve your spot</h3><p>Dates confirmed → we send payment instructions. 100% prepayment required 14 days before arrival.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="apply" class="soft">
+  <div class="narrow">
+    <span class="eyebrow">Apply</span>
+    <h2 class="serif">Ready to join?</h2>
+    <p class="lead" style="margin-top:10px;">Fill in the short form. We’ll review it and write back personally — usually within 48 hours.</p>
+    <div class="form-card">
+      <form id="appForm" name="internship-application" data-netlify="true" netlify-honeypot="bot-field" action="/">
+        <input type="hidden" name="form-name" value="internship-application" />
+        <p style="display:none;"><input name="bot-field" /></p>
+
+        <div class="f-row">
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="name">Your name <span>*</span></label>
+            <input type="text" name="name" id="name" class="fi" placeholder="First name" required />
+          </div>
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="email">Email <span>*</span></label>
+            <input type="email" name="email" id="email" class="fi" placeholder="your@email.com" required />
+          </div>
+        </div>
+
+        <div class="f-row" style="margin-top:20px;">
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="country">Country <span>*</span></label>
+            <input type="text" name="country" id="country" class="fi" placeholder="e.g. Germany" required />
+          </div>
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="age">Age <span>*</span></label>
+            <input type="number" name="age" id="age" class="fi" placeholder="e.g. 24" min="18" max="75" required />
+          </div>
+        </div>
+
+        <div class="fg">
+          <label class="fl">Are you a student? <span>*</span></label>
+          <div class="pills">
+            <label class="pill-o"><input type="radio" name="student" value="Yes" required />Yes</label>
+            <label class="pill-o"><input type="radio" name="student" value="No" />No</label>
+          </div>
+        </div>
+
+        <div class="fg">
+          <label class="fl">Marine biology / marine science background? <span>*</span></label>
+          <div class="pills">
+            <label class="pill-o"><input type="radio" name="marine_bio" value="Yes" required />Yes</label>
+            <label class="pill-o"><input type="radio" name="marine_bio" value="No" />No</label>
+          </div>
+        </div>
+
+        <div class="fg">
+          <label class="fl">Your background / field <span>*</span></label>
+          <div class="pills">
+            <label class="pill-o"><input type="radio" name="background" value="Marine Biology / Conservation" required />Marine Biology</label>
+            <label class="pill-o"><input type="radio" name="background" value="Marketing / Business" />Marketing</label>
+            <label class="pill-o"><input type="radio" name="background" value="Photography / Video" />Photo / Video</label>
+            <label class="pill-o"><input type="radio" name="background" value="Content Creation" />Content Creator</label>
+            <label class="pill-o"><input type="radio" name="background" value="Design / Art" />Design / Art</label>
+            <label class="pill-o"><input type="radio" name="background" value="Sustainability / Environment" />Sustainability</label>
+            <label class="pill-o"><input type="radio" name="background" value="Other" />Other</label>
+          </div>
+          <input type="text" name="background_detail" id="bg-other-text" class="fi" placeholder="Tell us your field..." style="display:none;margin-top:10px;" />
+        </div>
+
+        <div class="fg">
+          <label class="fl">Scuba diving level <span>*</span></label>
+          <div class="pills">
+            <label class="pill-o"><input type="radio" name="dive_level" value="No cert — will get OW in Bali" required />No cert — I’ll get OW in Bali</label>
+            <label class="pill-o"><input type="radio" name="dive_level" value="Open Water" />Open Water</label>
+            <label class="pill-o"><input type="radio" name="dive_level" value="Advanced Open Water" />Advanced OW</label>
+            <label class="pill-o"><input type="radio" name="dive_level" value="Rescue / DM / Instructor" />Rescue / DM+</label>
+          </div>
+        </div>
+
+        <div class="f-row">
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="arrival">Planned arrival <span>*</span></label>
+            <input type="month" name="arrival" id="arrival" class="fi" required />
+          </div>
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl">Duration <span>*</span></label>
+            <div class="pills">
+              <label class="pill-o"><input type="radio" name="duration" value="2 weeks" required />2 weeks</label>
+              <label class="pill-o"><input type="radio" name="duration" value="3 weeks" />3 weeks</label>
+              <label class="pill-o"><input type="radio" name="duration" value="1 month" />1 month</label>
+              <label class="pill-o"><input type="radio" name="duration" value="Longer" />Longer</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="fg" style="margin-top:20px;">
+          <label class="fl" for="note">Anything to add? <span style="opacity:.45;text-transform:none;letter-spacing:0;font-weight:400;">(optional)</span></label>
+          <textarea name="note" id="note" class="fi" placeholder="A couple of sentences is fine." maxlength="400"></textarea>
+        </div>
+
+        <button type="submit" class="f-submit">Send Application →</button>
+        <p class="f-note">We reply personally within 24–48 hours.<br/>No spam — just a real conversation.</p>
+      </form>
+      <div class="f-success" id="formSuccess" style="display:none;">
+        <div class="ico">🪸</div>
+        <h3>Application sent!</h3>
+        <p>Thank you! We’ll write back to your email within 24–48 hours.</p>
+      </div>
+    </div>
+    <p style="margin-top:26px;text-align:center;font-size:.84rem;color:var(--ink-soft);">
+      Quick question? <a href="https://wa.me/6281248368288?text=Hello%20Coral%20Sense%2C%20I%27m%20interested%20in%20your%20internship%20programs." target="_blank" rel="noopener" style="color:var(--coral);font-weight:600;">WhatsApp</a> or <a href="mailto:coralsense.bali@gmail.com" style="color:var(--coral);font-weight:600;">coralsense.bali@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-intro">
+      <div><span class="eyebrow">FAQ</span><h2 class="serif">Questions we hear most.</h2></div>
+      <div></div>
+    </div>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Do I need a marine biology background?<span class="faq-plus">+</span></button><div class="faq-a"><p>For Discovery: absolutely not. Any background, any profession. For Research: an academic background in marine biology, conservation, or a related field matters, as the program is built around field learning and professional development.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">I don't have an Open Water certification. Can I still come?<span class="faq-plus">+</span></button><div class="faq-a"><p>Yes. Open Water is needed for the in-water part, but you can complete it locally in Bali before the program or in your first days after arrival (~$320–350). For Discovery there's also a surface-participation option.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is this a paid position?<span class="faq-plus">+</span></button><div class="faq-a"><p>No. This is a fee-based internship — participants pay for the program and receive structured field experience, dives, accommodation, training, and support in return.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What's not included in the price?<span class="faq-plus">+</span></button><div class="faq-a"><p>Flights, visa, travel insurance, meals outside the included dive-day lunches, scooter rental, SIM card, and personal expenses. Local warung meals ~$1–3. European-style cafés ~$4–9.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I get from the airport to Coral House?<span class="faq-plus">+</span></button><div class="faq-a"><p>Airport transfer is included in both programs. A Coral Sense driver meets you at Denpasar and brings you to Coral House — about 2.5 hours.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="c-strip">
+  <div style="max-width:540px;margin:0 auto;">
+    <h2>Still have questions?</h2>
+    <p class="lead">We're happy to talk before you apply.<br/>Reach out on WhatsApp or email — we reply personally.</p>
+    <div class="c-btns">
+      <a href="https://wa.me/6281248368288?text=Hello%20Coral%20Sense%2C%20I%27m%20interested%20in%20your%20internship%20programs." class="btn btn-primary" target="_blank" rel="noopener">WhatsApp us</a>
+      <a href="#apply" class="btn btn-ghost">Apply Now</a>
+    </div>
+    <div class="c-links">
+      <a href="https://www.instagram.com/coralsense.bali/" target="_blank" rel="noopener">@coralsense.bali</a>
+      <a href="mailto:coralsense.bali@gmail.com">coralsense.bali@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>Coral Sense · East Bali, Indonesia · Coral Triangle</div>
+  <div><a href="https://www.instagram.com/coralsense.bali/" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:coralsense.bali@gmail.com">Email</a> · <a href="https://wa.me/6281248368288" target="_blank" rel="noopener">WhatsApp</a></div>
+</footer>
+
+<script>
+document.querySelectorAll('.pills').forEach(group=>{
+  group.querySelectorAll('.pill-o').forEach(pill=>{
+    pill.addEventListener('click',()=>{
+      const r=pill.querySelector('input[type="radio"]');
+      if(r){group.querySelectorAll('.pill-o').forEach(p=>p.classList.remove('on'));pill.classList.add('on');}
+    });
+  });
+});
+document.querySelectorAll('input[name="background"]').forEach(r=>{
+  r.addEventListener('change',()=>{document.getElementById('bg-other-text').style.display=r.value==='Other'?'block':'none';});
+});
+document.querySelectorAll('input[name="studying"]').forEach(r=>{
+  r.addEventListener('change',()=>{document.getElementById('study-text').style.display=r.value==='Yes'?'block':'none';});
+});
+document.getElementById('email').addEventListener('input',function(){document.getElementById('replyto-field').value=this.value;});
+const form=document.getElementById('appForm');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();const btn=form.querySelector('.f-submit');
+  btn.textContent='Sending…';btn.disabled=true;
+  try{
+    const fd=new URLSearchParams(new FormData(form));
+    const res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:fd.toString()});
+    if(res.ok){form.style.display='none';document.getElementById('formSuccess').style.display='block';}
+    else{btn.textContent='Something went wrong — try again';btn.disabled=false;}
+  }catch{btn.textContent='Something went wrong — try again';btn.disabled=false;}
+});
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const open=btn.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.faq-q').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.style.display='none';});
+    if(!open){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.style.display='block';}
+  });
+});
+</script>
+</body>
+</html>
