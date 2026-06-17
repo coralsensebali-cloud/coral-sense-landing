@@ -609,8 +609,7 @@ footer a:hover{color:var(--cream)}
     <h2 class="serif">Ready to join?</h2>
     <p class="lead" style="margin-top:10px;">Fill in the short form. We’ll review it and write back personally — usually within 48 hours.</p>
     <div class="form-card">
-      <form id="appForm" name="internship-application" data-netlify="true" netlify-honeypot="bot-field" action="/">
-        <input type="hidden" name="form-name" value="internship-application" />
+      <form id="appForm" action="https://formspree.io/f/xkoaazby" method="POST">
         <p style="display:none;"><input name="bot-field" /></p>
 
         <div class="f-row">
@@ -787,8 +786,8 @@ form.addEventListener('submit',async e=>{
   e.preventDefault();const btn=form.querySelector('.f-submit');
   btn.textContent='Sending…';btn.disabled=true;
   try{
-    const fd=new URLSearchParams(new FormData(form));
-    const res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:fd.toString()});
+    const fd=new FormData(form);
+    const res=await fetch('https://formspree.io/f/xkoaazby',{method:'POST',headers:{'Accept':'application/json'},body:fd});
     if(res.ok){form.style.display='none';document.getElementById('formSuccess').style.display='block';}
     else{btn.textContent='Something went wrong — try again';btn.disabled=false;}
   }catch{btn.textContent='Something went wrong — try again';btn.disabled=false;}
