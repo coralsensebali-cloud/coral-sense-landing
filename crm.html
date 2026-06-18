@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coral Sense — Applications</title>
+<style>
+:root{
+  --cream:#f8f7f5;--white:#fff;--ink:#0d1b2a;--soft:#4a5568;
+  --coral:#c75b3a;--line:rgba(13,27,42,.08);
+  --shadow:0 1px 3px rgba(13,27,42,.07),0 4px 14px rgba(13,27,42,.05);
+  --r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Inter","Helvetica Neue",sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased;line-height:1.5}
+
+/* HEADER */
+.hd{background:#0d1b2a;color:#fff;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.hd-logo{font-size:1rem;font-weight:700;display:flex;align-items:center;gap:8px;letter-spacing:-.01em}
+.hd-logo span{opacity:.5;font-weight:400}
+.hd-stats{display:flex;gap:20px}
+.stat{text-align:center}
+.stat-n{font-size:1.3rem;font-weight:700;line-height:1}
+.stat-l{font-size:.65rem;opacity:.55;text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+
+/* FILTERS */
+.fb{padding:12px 24px;display:flex;gap:7px;flex-wrap:wrap;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;align-items:center}
+.fbt{padding:5px 13px;border-radius:999px;border:1.5px solid var(--line);background:transparent;cursor:pointer;font-size:.78rem;font-weight:600;color:var(--soft);transition:all .15s;white-space:nowrap;font-family:inherit}
+.fbt:hover{border-color:#9ca3af;color:var(--ink)}
+.fbt.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.fbt .cnt{display:inline-block;margin-left:5px;background:rgba(0,0,0,.08);border-radius:999px;padding:0 6px;font-size:.7rem;line-height:1.5}
+.fbt.active .cnt{background:rgba(255,255,255,.18)}
+
+/* GRID */
+.grid{padding:20px 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+
+/* CARD */
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--line);padding:16px;cursor:pointer;transition:transform .15s,box-shadow .15s;display:flex;flex-direction:column;gap:9px}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(13,27,42,.1),0 8px 28px rgba(13,27,42,.06)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.card-name{font-size:.97rem;font-weight:700;letter-spacing:-.01em;line-height:1.2;flex:1}
+.sbadge{font-size:.65rem;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap;text-transform:uppercase;letter-spacing:.06em;flex-shrink:0}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:.72rem;padding:2px 7px;background:var(--cream);border-radius:4px;color:var(--soft);font-weight:500}
+.tag.disc{background:#e8f4f8;color:#0e6a8a}
+.tag.res{background:#f0e8f4;color:#6b21a8}
+.card-meta{font-size:.78rem;color:var(--soft);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.days{margin-left:auto;font-size:.72rem}
+.fubar{font-size:.73rem;padding:5px 9px;background:#fffbeb;border:1px solid #fcd34d;border-radius:6px;color:#92400e;font-weight:600}
+.card-note{font-size:.76rem;color:#9ca3af;font-style:italic;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin-top:auto}
+
+/* EMPTY */
+.empty{text-align:center;padding:80px 24px;color:var(--soft);grid-column:1/-1}
+.empty-i{font-size:2.5rem;margin-bottom:10px}
+
+/* OVERLAY & MODAL */
+.overlay{display:none;position:fixed;inset:0;background:rgba(13,27,42,.48);z-index:100;align-items:flex-start;justify-content:center;padding:32px 16px;overflow-y:auto}
+.overlay.open{display:flex}
+.modal{background:#fff;border-radius:14px;box-shadow:0 20px 60px rgba(13,27,42,.28);width:100%;max-width:620px;overflow:hidden}
+.mhd{background:#0d1b2a;color:#fff;padding:18px 22px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.mhd-title{font-size:1.1rem;font-weight:700}
+.mhd-sub{font-size:.78rem;opacity:.6;margin-top:2px}
+.xcl{background:rgba(255,255,255,.1);border:none;color:#fff;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s;font-family:inherit}
+.xcl:hover{background:rgba(255,255,255,.22)}
+.mbody{padding:20px 22px;display:grid;gap:18px}
+.sec-lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:#9ca3af;margin-bottom:9px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px}
+@media(max-width:480px){.fg{grid-template-columns:1fr}}
+.f{display:flex;flex-direction:column;gap:3px}
+.fl{font-size:.67rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:#9ca3af}
+.fv{font-size:.88rem;font-weight:500;color:var(--ink)}
+.fv a{color:var(--coral);text-decoration:underline}
+.fv.full{grid-column:1/-1}
+.divr{height:1px;background:var(--line)}
+.fr{display:flex;flex-direction:column;gap:4px;margin-bottom:11px}
+.fr label{font-size:.78rem;font-weight:600;color:var(--soft)}
+.fr select,.fr input,.fr textarea{padding:8px 11px;border:1.5px solid var(--line);border-radius:7px;font-size:.86rem;font-family:inherit;background:#fff;color:var(--ink);outline:none;transition:border-color .15s;width:100%}
+.fr select:focus,.fr input:focus,.fr textarea:focus{border-color:var(--coral)}
+.fr textarea{resize:vertical;min-height:70px}
+.mfoot{display:flex;gap:9px;flex-wrap:wrap;padding:14px 22px;border-top:1px solid var(--line);background:#fafaf9}
+.btn{padding:8px 17px;border-radius:7px;font-size:.82rem;font-weight:600;cursor:pointer;border:1.5px solid transparent;transition:all .15s;font-family:inherit}
+.btn-p{background:var(--coral);color:#fff;border-color:var(--coral)}
+.btn-p:hover{background:#b04d2e}
+.btn-g{background:transparent;color:var(--soft);border-color:var(--line)}
+.btn-g:hover{border-color:#9ca3af;color:var(--ink)}
+.btn-m{background:#eff6ff;color:#2563eb;border-color:#bfdbfe}
+.btn-m:hover{background:#dbeafe}
+.note-q{font-size:.78rem;padding:9px 11px;background:#fffbeb;border:1px solid #fcd34d;border-radius:7px;color:#78350f;margin-top:8px}
+</style>
+</head>
+<body>
+
+<header class="hd">
+  <div class="hd-logo">🪸 Coral Sense <span>/ Applications</span></div>
+  <div class="hd-stats" id="statsBar"></div>
+</header>
+
+<div class="fb" id="filtersBar"></div>
+<main class="grid" id="cardsGrid"></main>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+// ============================================================
+// APPLICANT DATA — Claude updates this section
+// ============================================================
+// === APPLICANTS_START ===
+const APPLICANTS_RAW = [
+  {
+    id:"app_001",
+    dateApplied:"2026-06-18",
+    name:"Test Applicant",
+    email:"coralsense.bali@gmail.com",
+    country:"Germany",
+    age:"26",
+    student:"Yes",
+    marineBio:"No",
+    background:"Marketing / Business",
+    diveLevel:"Open Water",
+    program:"Discovery",
+    arrival:"2026-08-01",
+    duration:"1 month",
+    accommodation:"Shared room (4 people, bunk beds)",
+    note:"TEST — please ignore. Checking form integration.",
+    status:"new",
+    followUpDate:"",
+    notes:"Тестовая заявка для проверки формы. Можно удалить.",
+    lastContact:"",
+    threadId:""
+  }
+];
+// === APPLICANTS_END ===
+
+// ============================================================
+// STATUS CONFIG
+// ============================================================
+const S = {
+  new:       {label:"New",          color:"#c75b3a",bg:"#fdf0ec"},
+  contacted: {label:"Contacted",    color:"#2563eb",bg:"#eff6ff"},
+  waiting:   {label:"Waiting Reply",color:"#7c3aed",bg:"#f5f3ff"},
+  interested:{label:"Interested",   color:"#0891b2",bg:"#ecfeff"},
+  confirmed: {label:"Confirmed",    color:"#16a34a",bg:"#f0fdf4"},
+  paid:      {label:"Paid ✓",       color:"#166534",bg:"#dcfce7"},
+  thinking:  {label:"Thinking...",  color:"#d97706",bg:"#fffbeb"},
+  declined:  {label:"Declined",     color:"#9ca3af",bg:"#f9fafb"},
+};
+
+const FLAGS = {
+  "germany":"🇩🇪","russia":"🇷🇺","uk":"🇬🇧","united kingdom":"🇬🇧",
+  "usa":"🇺🇸","united states":"🇺🇸","france":"🇫🇷","australia":"🇦🇺",
+  "netherlands":"🇳🇱","sweden":"🇸🇪","norway":"🇳🇴","denmark":"🇩🇰",
+  "finland":"🇫🇮","switzerland":"🇨🇭","austria":"🇦🇹","spain":"🇪🇸",
+  "italy":"🇮🇹","portugal":"🇵🇹","poland":"🇵🇱","czech republic":"🇨🇿",
+  "canada":"🇨🇦","new zealand":"🇳🇿","singapore":"🇸🇬","japan":"🇯🇵",
+  "south korea":"🇰🇷","brazil":"🇧🇷","mexico":"🇲🇽","israel":"🇮🇱",
+  "ukraine":"🇺🇦","indonesia":"🇮🇩","india":"🇮🇳","thailand":"🇹🇭",
+  "vietnam":"🇻🇳","china":"🇨🇳","ireland":"🇮🇪","belgium":"🇧🇪",
+};
+
+function flag(c){if(!c)return"";const f=FLAGS[c.toLowerCase()];return f?f+" ":""}
+
+// ============================================================
+// STATE (localStorage)
+// ============================================================
+function loadState(){try{return JSON.parse(localStorage.getItem('cs_crm')||'{}')}catch{return{}}}
+function saveState(s){localStorage.setItem('cs_crm',JSON.stringify(s))}
+function getAll(){
+  const st=loadState();
+  return APPLICANTS_RAW.map(a=>({
+    ...a,
+    status:   st[a.id]?.status   ?? a.status   ?? "new",
+    followUp: st[a.id]?.followUp ?? a.followUpDate ?? "",
+    notes:    st[a.id]?.notes    ?? a.notes    ?? "",
+  }));
+}
+function patch(id,ch){const s=loadState();s[id]={...s[id],...ch};saveState(s);render()}
+
+// ============================================================
+// UTILS
+// ============================================================
+let filter="all";
+
+function daysSince(d){if(!d)return 0;return Math.floor((new Date()-new Date(d))/86400000)}
+function fmtDate(d){
+  if(!d)return"—";
+  const dt=new Date(d+"T00:00:00");
+  return dt.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"2-digit"});
+}
+function isOverdue(d){return d&&new Date(d)<new Date(new Date().toDateString())}
+function isToday(d){return d&&new Date(d).toDateString()===new Date().toDateString()}
+
+// ============================================================
+// RENDER
+// ============================================================
+function render(){renderStats();renderFilters();renderCards()}
+
+function renderStats(){
+  const all=getAll();
+  const c={};Object.keys(S).forEach(k=>c[k]=0);
+  all.forEach(a=>c[a.status]=(c[a.status]||0)+1);
+  document.getElementById("statsBar").innerHTML=`
+    <div class="stat"><div class="stat-n">${all.length}</div><div class="stat-l">Total</div></div>
+    <div class="stat"><div class="stat-n" style="color:#ef9b6e">${c.new||0}</div><div class="stat-l">New</div></div>
+    <div class="stat"><div class="stat-n" style="color:#7dd3c0">${(c.contacted||0)+(c.waiting||0)+(c.interested||0)}</div><div class="stat-l">Active</div></div>
+    <div class="stat"><div class="stat-n" style="color:#86efac">${c.confirmed||0}</div><div class="stat-l">Confirmed</div></div>
+    <div class="stat"><div class="stat-n" style="color:#4ade80">${c.paid||0}</div><div class="stat-l">Paid</div></div>
+  `;
+}
+
+function renderFilters(){
+  const all=getAll();
+  const c={all:all.length};
+  all.forEach(a=>c[a.status]=(c[a.status]||0)+1);
+  const tabs=[
+    {k:"all",l:"All"},{k:"new",l:"New"},{k:"contacted",l:"Contacted"},
+    {k:"waiting",l:"Waiting"},{k:"interested",l:"Interested"},
+    {k:"confirmed",l:"Confirmed"},{k:"paid",l:"Paid"},
+    {k:"thinking",l:"Thinking"},{k:"declined",l:"Declined"},
+  ];
+  document.getElementById("filtersBar").innerHTML=tabs.map(t=>{
+    const n=c[t.k]||0;
+    if(t.k!=="all"&&n===0)return"";
+    return`<button class="fbt ${filter===t.k?"active":""}" onclick="setFilter('${t.k}')">${t.l}<span class="cnt">${n}</span></button>`;
+  }).join("");
+}
+
+function setFilter(k){filter=k;render()}
+
+function renderCards(){
+  const all=getAll();
+  const vis=filter==="all"?all:all.filter(a=>a.status===filter);
+  const grid=document.getElementById("cardsGrid");
+
+  if(vis.length===0){
+    grid.innerHTML=`<div class="empty"><div class="empty-i">📭</div><div>No applications here</div></div>`;
+    return;
+  }
+
+  vis.sort((a,b)=>new Date(b.dateApplied)-new Date(a.dateApplied));
+
+  grid.innerHTML=vis.map(a=>{
+    const st=S[a.status]||S.new;
+    const days=daysSince(a.dateApplied);
+    const od=a.followUp&&isOverdue(a.followUp);
+    const td=a.followUp&&isToday(a.followUp);
+    return`
+    <div class="card" onclick="openModal('${a.id}')">
+      <div class="card-top">
+        <div class="card-name">${flag(a.country)}${a.name}</div>
+        <div class="sbadge" style="background:${st.bg};color:${st.color}">${st.label}</div>
+      </div>
+      <div class="card-tags">
+        ${a.program?`<span class="tag ${a.program==="Discovery"?"disc":a.program==="Research"?"res":""}">${a.program}</span>`:""}
+        <span class="tag">${a.diveLevel}</span>
+        <span class="tag">${a.country}</span>
+      </div>
+      <div class="card-meta">
+        ${a.arrival?`<span>✈️ ${fmtDate(a.arrival)}</span>`:""}
+        ${a.duration?`<span>⏱ ${a.duration}</span>`:""}
+        <span class="days" style="color:${days>7?"#e05252":"#9ca3af"}">${days===0?"Today":days+"d ago"}</span>
+      </div>
+      ${a.followUp?`<div class="fubar">${od?"🔴":td?"🟡":"🟢"} Follow-up: ${fmtDate(a.followUp)}${od?" — OVERDUE":td?" — TODAY":""}</div>`:""}
+      ${a.note?`<div class="card-note">"${a.note}"</div>`:""}
+    </div>`;
+  }).join("");
+}
+
+// ============================================================
+// MODAL
+// ============================================================
+function openModal(id){
+  const a=getAll().find(x=>x.id===id);
+  if(!a)return;
+  const st=S[a.status]||S.new;
+  const opts=Object.entries(S).map(([k,v])=>`<option value="${k}"${a.status===k?" selected":""}>${v.label}</option>`).join("");
+
+  document.getElementById("modal").innerHTML=`
+    <div class="mhd">
+      <div>
+        <div class="mhd-title">${a.name}</div>
+        <div class="mhd-sub">${a.email} · Applied ${fmtDate(a.dateApplied)} · ${daysSince(a.dateApplied)}d ago</div>
+      </div>
+      <button class="xcl" onclick="closeModal()">✕</button>
+    </div>
+    <div class="mbody">
+      <div>
+        <div class="sec-lbl">Application Details</div>
+        <div class="fg">
+          <div class="f"><div class="fl">Email</div><div class="fv"><a href="mailto:${a.email}">${a.email}</a></div></div>
+          <div class="f"><div class="fl">Country</div><div class="fv">${flag(a.country)}${a.country||"—"}</div></div>
+          <div class="f"><div class="fl">Age</div><div class="fv">${a.age||"—"}</div></div>
+          <div class="f"><div class="fl">Student?</div><div class="fv">${a.student||"—"}</div></div>
+          <div class="f"><div class="fl">Marine Bio</div><div class="fv">${a.marineBio||"—"}</div></div>
+          <div class="f"><div class="fl">Background</div><div class="fv">${a.background||"—"}</div></div>
+          <div class="f"><div class="fl">Dive Level</div><div class="fv">${a.diveLevel||"—"}</div></div>
+          <div class="f"><div class="fl">Program</div><div class="fv">${a.program||"—"}</div></div>
+          <div class="f"><div class="fl">Arrival</div><div class="fv">${fmtDate(a.arrival)}</div></div>
+          <div class="f"><div class="fl">Duration</div><div class="fv">${a.duration||"—"}</div></div>
+          <div class="f full"><div class="fl">Accommodation</div><div class="fv">${a.accommodation||"—"}</div></div>
+        </div>
+        ${a.note?`<div class="note-q"><strong>Their note:</strong> ${a.note}</div>`:""}
+      </div>
+      <div class="divr"></div>
+      <div>
+        <div class="sec-lbl">CRM</div>
+        <div class="fr"><label>Status</label><select id="m-st">${opts}</select></div>
+        <div class="fr"><label>Follow-up date</label><input type="date" id="m-fu" value="${a.followUp||""}"/></div>
+        <div class="fr"><label>Internal notes</label><textarea id="m-nt" placeholder="Notes visible only to you...">${a.notes||""}</textarea></div>
+      </div>
+    </div>
+    <div class="mfoot">
+      <button class="btn btn-p" onclick="saveModal('${a.id}')">Save</button>
+      <button class="btn btn-m" onclick="location.href='mailto:'+encodeURIComponent(a.email)+'?subject=Internship%20Application%20%E2%80%94%20Coral%20Sense'">✉ Write email</button>
+      <button class="btn btn-g" onclick="closeModal()">Close</button>
+    </div>`;
+
+  document.getElementById("overlay").classList.add("open");
+}
+
+function saveModal(id){
+  patch(id,{
+    status:document.getElementById("m-st").value,
+    followUp:document.getElementById("m-fu").value,
+    notes:document.getElementById("m-nt").value,
+  });
+  closeModal();
+}
+
+function closeModal(){document.getElementById("overlay").classList.remove("open")}
+document.getElementById("overlay").addEventListener("click",function(e){if(e.target===this)closeModal()});
+
+render();
+</script>
+</body>
+</html>
