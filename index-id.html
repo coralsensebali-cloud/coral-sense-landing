@@ -1,577 +1,804 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coral Sense | Magang di Bali</title>
-  <meta name="description" content="Magang Coral Sense di Bali: Magang Restorasi Terumbu Karang untuk semua latar belakang, dan Magang Biologi Kelautan & Penelitian untuk peserta yang berfokus pada sains.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Coral Sense — Magang Restorasi Terumbu Karang di Bali</title>
+<meta name="description" content="Ikuti magang restorasi terumbu karang nyata di Bali Timur. Dua format — terbuka untuk semua latar belakang, atau jalur penelitian yang lebih dalam untuk mahasiswa biologi kelautan. Segitiga Terumbu Karang." />
+<meta name="theme-color" content="#f5f1ec" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{
+  --cream:#f5f1ec;--cream-soft:#ebe5dc;--ink:#0d1b2a;--ink-soft:#2a3a4a;
+  --coral:#c75b3a;--coral-h:#b04d2e;--deep:#0b1c2c;--sand:#d9cfc0;
+  --line:rgba(13,27,42,.10);--line-d:rgba(245,241,236,.12);
+  --r:3px;--pad:clamp(20px,5vw,48px);--sec:clamp(70px,10vw,110px);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Inter","Helvetica Neue",sans-serif;background:var(--cream);color:var(--ink);line-height:1.62;font-size:clamp(15px,1.5vw,17px);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+.serif{font-family:"Georgia","Times New Roman",serif;font-weight:400}
+h1,h2{font-weight:700;letter-spacing:-.022em;line-height:1.08}
+h1{font-size:clamp(2.4rem,7.5vw,5.8rem)}
+h2{font-size:clamp(1.8rem,4.6vw,3.1rem);margin-bottom:.55em}
+h3{font-size:clamp(1.15rem,2.4vw,1.55rem);font-weight:600;line-height:1.2;letter-spacing:-.01em}
+h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.22em;font-weight:700}
+p{margin-bottom:1em;max-width:65ch}p:last-child{margin-bottom:0}
+ul{padding-left:1.25em}li{margin-bottom:.45em}
+.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.26em;font-weight:700;color:var(--coral);display:block;margin-bottom:1.3rem}
+.dark .eyebrow{color:#e3a882}
+.lead{font-size:clamp(1rem,2vw,1.18rem);line-height:1.58;color:var(--ink-soft);max-width:58ch}
+.dark .lead{color:rgba(245,241,236,.76)}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.narrow{max-width:740px;margin:0 auto;padding:0 var(--pad)}
+section{padding:var(--sec) 0;border-bottom:1px solid var(--line)}
+section.dark{background:var(--deep);color:var(--cream);border-color:var(--line-d)}
+section.soft{background:var(--cream-soft)}
+section.flush{padding:0;border:none}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px)}
+@media(max-width:860px){.two-col{grid-template-columns:1fr}}
+.two-col h3{margin-bottom:14px}.two-col ul{font-size:.92rem}.two-col li{margin-bottom:7px;line-height:1.5}
+.section-intro{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(20px,4vw,80px);align-items:start;margin-bottom:clamp(40px,6vw,64px)}
+@media(max-width:860px){.section-intro{grid-template-columns:1fr;gap:14px}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:999px;font-weight:600;font-size:.92rem;border:2px solid transparent;cursor:pointer;transition:all .2s;white-space:nowrap;text-align:center}
+.btn-primary{background:var(--coral);color:#fff;border-color:var(--coral)}
+.btn-primary:hover{background:var(--coral-h);transform:translateY(-1px);box-shadow:0 4px 18px rgba(199,91,58,.28)}
+.btn-ghost{background:transparent;color:var(--cream);border-color:rgba(245,241,236,.38)}
+.btn-ghost:hover{border-color:var(--cream);background:rgba(245,241,236,.07)}
+.btn-dark{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btn-dark:hover{background:var(--coral);border-color:var(--coral)}
+.btn-outline{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-outline:hover{background:var(--ink);color:var(--cream)}
+.btn-full{width:100%;justify-content:center}
+.nav{position:sticky;top:0;z-index:100;background:rgba(245,241,236,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1320px;margin:0 auto;padding:0 var(--pad);height:62px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:.88rem;letter-spacing:.14em;text-transform:uppercase}
+.logo img{height:32px;width:auto;display:block}
+.nav-links{display:flex;gap:26px;font-size:.84rem}
+.nav-links a{color:var(--ink-soft);font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--coral)}
+@media(max-width:880px){.nav-links{display:none}}
+/* HERO */
+.hero{position:relative;min-height:95vh;min-height:95svh;display:flex;align-items:flex-end;overflow:hidden;background:#0a1a2a}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(168deg,rgba(11,28,44,.05) 0%,rgba(11,28,44,.28) 48%,rgba(11,28,44,.96) 100%)}
+.hero-content{position:relative;z-index:2;color:var(--cream);padding:0 var(--pad) clamp(60px,8vw,96px);max-width:1320px;margin:0 auto;width:100%}
+.hero-eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.3em;font-weight:600;opacity:.62;display:block;margin-bottom:clamp(16px,2.5vw,26px)}
+.hero h1{font-family:"Georgia",serif;font-weight:400;font-size:clamp(2.6rem,8vw,6.2rem);line-height:1.0;letter-spacing:-.025em;max-width:14ch;margin-bottom:clamp(18px,2.5vw,28px)}
+.hero .sub{font-size:clamp(1rem,2.2vw,1.18rem);opacity:.84;max-width:52ch;margin-bottom:clamp(28px,4vw,42px);line-height:1.55}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+/* MARQUEE GRID */
+.marquee-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;padding:6px;background:var(--cream)}
+.marquee-grid img{width:100%;height:100%;object-fit:cover}
+.marquee-grid .m1{grid-column:1;grid-row:1/span 2;aspect-ratio:1/1.08}
+.marquee-grid .m2{grid-column:2;grid-row:1;aspect-ratio:1}
+.marquee-grid .m3{grid-column:3;grid-row:1;aspect-ratio:1}
+.marquee-grid .m4{grid-column:2;grid-row:2;aspect-ratio:1}
+.marquee-grid .m5{grid-column:3;grid-row:2;aspect-ratio:1}
+@media(max-width:700px){.marquee-grid{grid-template-columns:1fr 1fr}.marquee-grid .m1{grid-column:1/span 2;grid-row:1;aspect-ratio:16/9}.marquee-grid .m2{grid-column:1;grid-row:2}.marquee-grid .m3{grid-column:2;grid-row:2}.marquee-grid .m4,.marquee-grid .m5{display:none}}
+/* STATS */
+.stats-bar{background:var(--ink);padding:22px var(--pad);border:none}
+.stats-bar-inner{max-width:1320px;margin:0 auto;display:flex;gap:clamp(20px,5vw,60px);align-items:center;justify-content:center;flex-wrap:wrap}
+.stat{text-align:center}.stat-n{font-size:clamp(1.1rem,2.5vw,1.65rem);font-weight:800;color:#e3a882;display:block;line-height:1}
+.stat-l{font-size:.68rem;text-transform:uppercase;letter-spacing:.18em;opacity:.55;display:block;margin-top:5px;color:var(--cream)}
+/* PROGRAM CARDS */
+.prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.5vw,28px)}
+@media(max-width:760px){.prog-grid{grid-template-columns:1fr}}
+.pcard{border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s}
+.pcard:hover{box-shadow:0 10px 44px rgba(13,27,42,.1);transform:translateY(-3px)}
+.pcard-img{aspect-ratio:16/10;overflow:hidden}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.pcard:hover .pcard-img img{transform:scale(1.04)}
+.pcard-body{padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;flex:1}
+.pcard-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.2em;color:var(--coral);font-weight:700;margin-bottom:12px}
+.pcard h3{margin-bottom:10px;font-size:clamp(1.15rem,2vw,1.48rem)}
+.pcard>.pcard-body>p{font-size:.92rem;color:var(--ink-soft)}
+.pcard-badges{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 20px}
+.badge{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);background:var(--cream-soft);padding:4px 12px;border-radius:999px}
+.pcard-price{margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
+.pcard-price .amt{font-size:1.55rem;font-weight:800}.pcard-price .per{font-size:.84rem;color:var(--ink-soft)}
+.pcard-price small{display:block;font-size:.76rem;color:var(--ink-soft);margin:4px 0 16px}
+/* PHILOSOPHY */
+.philosophy{background:var(--deep);color:var(--cream);padding:clamp(50px,8vw,88px) var(--pad);border:none;text-align:center}
+.philosophy blockquote{font-family:"Georgia",serif;font-weight:400;font-size:clamp(1.5rem,4.2vw,2.7rem);line-height:1.28;max-width:20ch;margin:0 auto 22px}
+.philosophy p{color:rgba(245,241,236,.62);max-width:52ch;margin:0 auto;font-size:1rem}
+/* SITES */
+.site-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,36px);margin-top:clamp(36px,5vw,56px)}
+@media(max-width:800px){.site-grid{grid-template-columns:1fr}}
+.scard{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.scard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.scard-body{padding:clamp(20px,3vw,28px)}.scard h3{margin-bottom:10px}.scard p{font-size:.9rem;color:var(--ink-soft)}
+.scard-stats{list-style:none;padding:0;margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.scard-stats li{display:flex;justify-content:space-between;padding:7px 0;font-size:.86rem;border-bottom:1px solid var(--line)}
+.scard-stats li:last-child{border-bottom:none}.scard-stats .sv{font-weight:700}
+.five-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:6px}
+.five-grid img{aspect-ratio:3/4;object-fit:cover;width:100%}
+@media(max-width:700px){.five-grid{grid-template-columns:1fr 1fr}.five-grid img{aspect-ratio:1}}
+/* PROGRAM DETAIL */
+.prog{padding:clamp(80px,11vw,130px) 0}
+.prog-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:end;margin-bottom:clamp(48px,7vw,80px)}
+@media(max-width:900px){.prog-top{grid-template-columns:1fr}}
+.prog-top img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.prog-top h2{font-family:"Georgia",serif;font-weight:400;font-size:clamp(1.8rem,4.6vw,3.2rem);line-height:1.05;margin-bottom:18px}
+.prog-meta{display:flex;gap:18px;flex-wrap:wrap;font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft);font-weight:600;margin:16px 0 0}
+.prog-meta-d{color:rgba(245,241,236,.56)}
+.callout{margin:22px 0;padding:18px 22px;background:var(--cream-soft);border-left:3px solid var(--coral);border-radius:0 var(--r) var(--r) 0;font-size:.9rem;color:var(--ink-soft);line-height:1.6}
+.callout-d{background:rgba(255,255,255,.05);border-color:#e3a882;color:rgba(245,241,236,.72)}
+.dark .two-col li{color:rgba(245,241,236,.8)}.dark h3{color:var(--cream)}
+.price-box{margin-top:28px;padding:24px 28px;background:var(--cream-soft);border-radius:8px;border:1px solid var(--line)}
+.price-box .big{font-size:2.3rem;font-weight:900;line-height:1;margin-bottom:8px}
+.price-box .sub{font-size:.82rem;color:var(--ink-soft);margin-bottom:18px}
+.price-box-d{margin-top:28px;padding:24px 28px;background:rgba(255,255,255,.05);border-radius:8px;border:1px solid rgba(245,241,236,.12)}
+.price-box-d .big{font-size:2.3rem;font-weight:900;line-height:1;margin-bottom:8px;color:var(--cream)}
+.price-box-d .sub{font-size:.82rem;color:rgba(245,241,236,.5);margin-bottom:18px}
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;margin-top:clamp(36px,5vw,56px)}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.g1{grid-column:span 5;aspect-ratio:4/5}.g2{grid-column:span 7;aspect-ratio:7/5}
+.g3{grid-column:span 4;aspect-ratio:1}.g4{grid-column:span 4;aspect-ratio:1}.g5{grid-column:span 4;aspect-ratio:1}
+@media(max-width:700px){.gallery{grid-template-columns:1fr 1fr}.g1{grid-column:span 2;aspect-ratio:4/3}.g2{grid-column:span 2;aspect-ratio:4/3}.g3,.g4{grid-column:span 1}.g5{grid-column:span 2;aspect-ratio:4/3}}
+.bw{filter:grayscale(100%) contrast(1.06)}
+/* WEEKS */
+.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.5vw,28px);margin-top:40px}
+@media(max-width:880px){.weeks{grid-template-columns:1fr 1fr}}@media(max-width:480px){.weeks{grid-template-columns:1fr}}
+.wk{border-top:2px solid rgba(245,241,236,.14);padding-top:20px}
+.wk-n{font-size:3rem;font-weight:900;color:rgba(245,241,236,.1);line-height:1;margin-bottom:10px}
+.wk h4{color:#e3a882;margin-bottom:10px}.wk p{font-size:.88rem;color:rgba(245,241,236,.72);line-height:1.58}
+/* PHOTO BREAK */
+.pb{width:100%;aspect-ratio:21/8;object-fit:cover;display:block}
+@media(max-width:700px){.pb{aspect-ratio:16/9}}
+/* CORAL HOUSE */
+.house-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:7px;margin-top:40px}
+.house-grid img{width:100%;height:100%;object-fit:cover}
+.house-grid .hm{grid-column:1;grid-row:1/span 2;aspect-ratio:1/1.08}.house-grid .hs{aspect-ratio:1}
+@media(max-width:700px){.house-grid{grid-template-columns:1fr 1fr}.house-grid .hm{grid-column:1/span 2;grid-row:1;aspect-ratio:16/9}}
+/* COMMUNITY ROW */
+.community-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:clamp(30px,4vw,48px)}
+.community-row img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r)}
+@media(max-width:600px){.community-row{grid-template-columns:1fr 1fr}}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3.5vw,44px);margin-top:clamp(36px,5vw,52px)}
+@media(max-width:680px){.steps{grid-template-columns:1fr;gap:28px}}
+.step-n{font-size:3.8rem;font-weight:900;color:var(--cream-soft);line-height:1;margin-bottom:12px}
+.step h3{margin-bottom:10px}.step p{font-size:.9rem;color:var(--ink-soft)}
+.step-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);margin-bottom:20px;display:block}
+/* FORM */
+.form-card{background:#fff;border-radius:10px;padding:clamp(26px,4vw,48px);box-shadow:0 2px 44px rgba(13,27,42,.08);margin-top:clamp(34px,5vw,48px);max-width:700px;margin-left:auto;margin-right:auto}
+.fg{margin-bottom:22px}
+.fl{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--ink-soft);margin-bottom:10px}
+.fl span{color:var(--coral)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill-o{display:inline-block;padding:8px 17px;border-radius:999px;border:1.5px solid var(--sand);background:#fff;cursor:pointer;font-size:.84rem;font-weight:500;color:var(--ink-soft);transition:all .15s;user-select:none}
+.pill-o:hover{border-color:var(--coral);color:var(--coral)}.pill-o.on{background:var(--coral);border-color:var(--coral);color:#fff}
+.pill-o input{position:absolute;opacity:0;pointer-events:none}
+.fi{width:100%;padding:12px 16px;border:1.5px solid var(--sand);border-radius:7px;font-size:.95rem;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .15s;appearance:none}
+.fi:focus{outline:none;border-color:var(--coral)}textarea.fi{resize:vertical;min-height:90px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:520px){.f-row{grid-template-columns:1fr}}
+.f-submit{width:100%;padding:16px;font-size:1rem;border-radius:999px;border:none;background:var(--coral);color:#fff;font-weight:700;cursor:pointer;transition:all .2s;margin-top:6px;letter-spacing:.02em;font-family:inherit}
+.f-submit:hover{background:var(--coral-h);transform:translateY(-1px);box-shadow:0 5px 22px rgba(199,91,58,.28)}
+.f-note{font-size:.76rem;color:var(--ink-soft);margin-top:12px;text-align:center;opacity:.65}
+.f-success{display:none;text-align:center;padding:48px 20px}
+.f-success .ico{font-size:3rem;margin-bottom:14px}.f-success h3{margin-bottom:10px}
+.f-success p{color:var(--ink-soft);max-width:42ch;margin:0 auto}
+/* FAQ */
+.faq{max-width:760px;margin-top:clamp(28px,4vw,48px)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;padding:20px 0;background:none;border:none;cursor:pointer;font-size:.98rem;font-weight:600;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:inherit}
+.faq-plus{font-size:1.25rem;color:var(--coral);transition:transform .2s;flex-shrink:0}
+.faq-q[aria-expanded="true"] .faq-plus{transform:rotate(45deg)}
+.faq-a{display:none;padding-bottom:20px;font-size:.9rem;color:var(--ink-soft);line-height:1.65}
+/* CONTACT & FOOTER */
+.c-strip{background:var(--ink);color:var(--cream);padding:clamp(50px,7vw,80px) var(--pad);border:none;text-align:center}
+.c-strip h2{color:var(--cream);margin-bottom:10px}.c-strip .lead{color:rgba(245,241,236,.62);margin:0 auto 32px}
+.c-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.c-links{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;font-size:.84rem;color:rgba(245,241,236,.48)}
+.c-links a:hover{color:var(--cream)}
+footer{background:var(--deep);color:rgba(245,241,236,.42);padding:26px var(--pad);font-size:.76rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+footer a:hover{color:var(--cream)}
+/* EMAIL FLOAT */
+.wa{position:fixed;bottom:24px;right:24px;z-index:500;width:54px;height:54px;border-radius:50%;background:var(--coral);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 22px rgba(200,100,60,.35);transition:transform .2s,box-shadow .2s}
+.wa:hover{transform:scale(1.09);box-shadow:0 6px 30px rgba(200,100,60,.5)}
+.tag-pill{display:inline-block;padding:4px 14px;border-radius:999px;border:1px solid var(--sand);font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;font-weight:700;color:var(--ink-soft);margin-bottom:16px}
+.dark .tag-pill{border-color:rgba(245,241,236,.2);color:rgba(245,241,236,.5)}
+</style>
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <div class="topbar-inner">
-        <a class="brand" href="#top">
-          <img src="assets/logo-white.webp" alt="Logo Coral Sense">
-          <span>Coral Sense</span>
-        </a>
-        <div class="top-links">
-          <a href="index.html">EN</a>
-          <a href="index-ru.html">RU</a>
-          <a href="https://www.instagram.com/coralsense.bali/" target="_blank" rel="noopener noreferrer">Instagram</a>
+
+<a class="wa" href="mailto:coralsense.bali@gmail.com?subject=Internship%20Application%20%E2%80%94%20Coral%20Sense" aria-label="Email kami">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+</a>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo"><img src="assets/editable/logo-black.png" alt="Coral Sense" />Coral Sense</div>
+    <div class="nav-links">
+      <a href="#programs">Program</a><a href="#sites">Lokasi Kami</a>
+      <a href="#discovery">Discovery</a><a href="#research">Research</a>
+      <a href="#coral-house">Coral House</a><a href="#faq">FAQ</a>
+    </div>
+    <a href="#apply" class="btn btn-primary" style="padding:9px 22px;font-size:.84rem;">Daftar Sekarang</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <img src="assets/editable/hero-main.jpg" alt="Diver restoring corals in Bali ocean" class="hero-img" />
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Coral Sense · Bali Timur · Segitiga Terumbu Karang</span>
+    <h1 class="serif">Lautnya tidak rusak.<br/>Hubungan kita dengan laut itulah yang rusak.</h1>
+    <p class="sub">Bergabunglah dalam proyek restorasi terumbu karang hidup di Bali. Dua format — satu terbuka untuk siapa pun dengan rasa ingin tahu dan kepedulian, satu jalur penelitian yang lebih dalam untuk mahasiswa biologi kelautan.</p>
+    <div class="hero-btns">
+      <a href="#apply" class="btn btn-primary">Daftar Sekarang</a>
+      <a href="#programs" class="btn btn-ghost">Lihat Program</a>
+    </div>
+  </div>
+</header>
+
+<!-- PHOTO MARQUEE — 5 фото -->
+<section class="flush">
+  <div class="marquee-grid">
+    <!-- p-m1.jpg: фото 1 (B&W дайвер с ящиком) -->
+    <img src="assets/editable/field-1.jpg" alt="Diver over coral reef" class="m1" />
+    <!-- p-m2.jpg: фото 16 (черепаха) -->
+    <img src="assets/editable/field-2.jpg" alt="Turtle at coral restoration structure" class="m2" />
+    <!-- p-m3.jpg: фото 8 (девушка сажает кораллы) -->
+    <img src="assets/editable/field-3.jpg" alt="Diver planting corals" class="m3" />
+    <!-- p-m4.jpg: фото 15 (золотой закат) -->
+    <img src="assets/editable/closing-1.jpg" alt="Sunset over Bali bay" class="m4" />
+    <!-- p-m5.jpg: фото 20 (команда в гидрокостюмах) -->
+    <img src="assets/editable/field-4.jpg" alt="Coral Sense team" class="m5" />
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat"><span class="stat-n">500,000+</span><span class="stat-l">Karang Dipulihkan</span></div>
+    <div class="stat"><span class="stat-n">8,000 m²</span><span class="stat-l">Dasar Laut Dipulihkan</span></div>
+    <div class="stat"><span class="stat-n">2 Sites</span><span class="stat-l">Amed &amp; Padang Bai</span></div>
+    <div class="stat"><span class="stat-n">Coral Triangle</span><span class="stat-l">Wilayah Paling Beragam Hayati</span></div>
+    <div class="stat"><span class="stat-n">Any Background</span><span class="stat-l">Selamat Datang</span></div>
+  </div>
+</div>
+
+<section id="programs">
+  <div class="wrap">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Dua Program</span>
+        <h2 class="serif">Satu proyek.<br/>Dua cara masuk.</h2>
+      </div>
+      <div>
+        <p class="lead">Kedua magang berlangsung dalam proyek Coral Sense yang sama di Bali Timur. Kamu menjadi bagian dari tim, tinggal di Coral House, dan menyelam di laut yang sama. Yang berbeda adalah kedalaman dan fokus keterlibatanmu.</p>
+      </div>
+    </div>
+    <div class="prog-grid">
+      <div class="pcard">
+        <!-- p-disc-card.jpg: фото 18 (два дайвера, яркие кораллы, Green School) -->
+        <div class="pcard-img"><img src="assets/editable/program-discovery-card.jpg" alt="Divers working with colorful corals" /></div>
+        <div class="pcard-body">
+          <div class="pcard-tag">Program 1 · Discovery</div>
+          <h3>Untuk semua profesi.<br/>Semua latar belakang, semua usia.</h3>
+          <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700;color:var(--ink-soft);margin-bottom:10px;">Magang Restorasi Terumbu Karang Discovery</p>
+          <p>Satu hari penuh di laut setiap minggu dalam proyek restorasi nyata. Sisa waktumu untuk menikmati Bali Timur sesuai ritmu sendiri.</p>
+          <div class="pcard-badges"><span class="badge">Semua latar belakang</span><span class="badge">2–4+ minggu</span><span class="badge">8 penyelaman / bulan</span></div>
+          <div class="pcard-price">
+            <span class="amt">$1,200</span><span class="per"> / month</span>
+            <small>Akomodasi termasuk · Mulai 1 minggu · Perpanjangan bisa</small>
+            <a href="#discovery" class="btn btn-outline btn-full">Lihat Discovery →</a>
+          </div>
         </div>
       </div>
-    </header>
-
-	    <main id="top">
-	      <section class="hero">
-	        <div class="hero-copy">
-	          <div class="hero-word">Magang</div>
-	          <p class="sub">Magang restorasi terumbu karang nyata di Bali dengan dua format: satu lebih terbuka untuk semua latar belakang, satu lagi lebih mendalam untuk peserta yang berfokus pada biologi kelautan dan penelitian.</p>
-	        </div>
-	        <div class="hero-media">
-	          <span class="hero-badge">Bali, Indonesia / Dua Format Magang</span>
-		          <img src="assets/editable/hero-main.jpg" alt="Penyelam scuba mencatat di bawah air di lokasi restorasi terumbu karang">
-	        </div>
-	        <div class="hero-copy">
-	          <div class="kicker">Magang Coral Sense</div>
-	          <h1>Pilih format yang sesuai dengan latar belakang dan tujuanmu</h1>
-	          <p class="sub">Coral Sense menawarkan dua jalur magang di Bali: format discovery yang lebih terbuka untuk peserta dari semua latar belakang yang ingin terlibat langsung dalam restorasi terumbu karang, dan magang biologi kelautan & penelitian yang lebih mendalam, dirancang untuk mahasiswa dan peserta awal karier yang mencari relevansi lapangan nyata untuk studi dan pekerjaan ke depan.</p>
-	          <div class="cta-row">
-	            <a class="button" href="apply.html">Daftar Lewat Formulir</a>
-            <a class="button secondary" href="https://wa.me/6281248368288?text=Hello%20Coral%20Sense%2C%20I%27m%20interested%20in%20your%20internship%20programs." target="_blank" rel="noopener noreferrer">Tanya Sebentar</a>
-          </div>
-          <div class="chips">
-            <span>2 jalur magang</span>
-            <span>kondisi laut nyata</span>
-            <span>menginap di Coral House</span>
-            <span>jemput bandara</span>
-            <span>formulir pendaftaran terstruktur</span>
+      <div class="pcard">
+        <!-- p-res-card.jpg: фото 10 (дайвер пишет заметки, синий костюм) -->
+        <div class="pcard-img"><img src="assets/editable/program-research-card.jpg" alt="Diver writing research notes underwater" /></div>
+        <div class="pcard-body">
+          <div class="pcard-tag">Program 2 · Research</div>
+          <h3>Untuk mahasiswa biologi kelautan.<br/>Dan mereka yang siap lebih dalam.</h3>
+          <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700;color:var(--ink-soft);margin-bottom:10px;">Magang Biologi Kelautan &amp; Penelitian</p>
+          <p>Mahasiswa dan peserta awal karier di bidang biologi kelautan, konservasi, dan ilmu lingkungan. Praktik lapangan dengan nilai akademis dan CV yang nyata.</p>
+          <div class="pcard-badges"><span class="badge">Mahasiswa biologi kelautan</span><span class="badge">4+ minggu</span><span class="badge">16 penyelaman / bulan</span></div>
+          <div class="pcard-price">
+            <span class="amt">$1,680</span><span class="per"> / month</span>
+            <small>Akomodasi termasuk · 30 malam · Minimum 4 minggu</small>
+            <a href="#research" class="btn btn-outline btn-full">Lihat Research →</a>
           </div>
         </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="kicker">Pilih Formatmu</div>
-          <h2>Satu jalur dasar, satu jalur berbasis penelitian</h2>
-          <p>Kedua program berlangsung dalam proyek hidup yang sama. Pilih antara jalur discovery yang terbuka dengan 8 penyelaman per bulan untuk semua latar belakang, dan jalur berbasis penelitian dengan 16 penyelaman dalam 4 minggu untuk mahasiswa biologi kelautan dan peserta terkait.</p>
-        </div>
-        <div class="program-grid">
-          <a class="program-card" href="#general-program">
-	            <img src="assets/editable/program-discovery-card.jpg" alt="Peserta bekerja dengan lembut bersama terumbu karang di bawah air">
-            <div class="content">
-              <div class="eyebrow">Untuk pemula / 2-4 minggu</div>
-              <h3>Magang Restorasi Terumbu Karang Discovery</h3>
-              <p>Magang Bali yang lebih ringan untuk semua latar belakang: menyelam dengan tujuan, belajar dasar-dasar restorasi terumbu karang, dan menikmati tinggal di pulau yang bermakna dengan banyak waktu bebas di sekitar program.</p>
-              <div class="program-meta">
-                <span>8 penyelaman / bulan</span>
-                <span>semua latar belakang</span>
-                <span>2-4+ minggu</span>
-              </div>
-              <div class="cta-row">
-                <span class="button small">Baca Selengkapnya</span>
-              </div>
-            </div>
-          </a>
-          <a class="program-card" href="#research-program">
-	            <img src="assets/editable/program-research-card.jpg" alt="Peserta melakukan survei struktur restorasi terumbu karang di bawah air">
-            <div class="content">
-              <div class="eyebrow">Untuk mahasiswa / 4+ minggu</div>
-              <h3>Magang Biologi Kelautan &amp; Penelitian</h3>
-              <p>Format berbasis lapangan untuk mahasiswa biologi kelautan, konservasi kelautan, dan bidang terkait yang membutuhkan praktik langsung, literasi pemantauan terumbu karang, dan relevansi penelitian.</p>
-              <div class="program-meta">
-                <span>16 penyelaman / 4 minggu</span>
-                <span>fokus sains</span>
-                <span>untuk mahasiswa</span>
-              </div>
-              <div class="cta-row">
-                <span class="button small">Baca Selengkapnya</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="kicker">Lokasi Restorasi Kami</div>
-          <h2>Dua taman. Dua sisi samudra.</h2>
-          <p>Coral Sense bekerja di dua konteks restorasi yang sangat berbeda. Di Amed, lokasi ini bernilai ilmiah karena kondisinya tidak mudah. Di Padang Bai, skalanya lebih besar dan taman ini menunjukkan seperti apa restorasi berskala besar dalam praktiknya.</p>
-        </div>
-        <div class="site-grid">
-          <article class="site-card">
-            <img src="assets/editable/site-amed.jpg" alt="Taman penelitian Coral Sense di Amed">
-            <div class="content">
-              <div class="eyebrow">Amed / Taman Penelitian</div>
-              <h3>Di mana ketangguhan menjadi nyata</h3>
-              <p>Lokasi utama kami berada di perairan dangkal yang hangat, dibentuk oleh sedimen, pasir yang bergerak, turbiditas musiman, dan kondisi tekanan nyata lainnya. Itulah tepatnya mengapa ini penting.</p>
-              <ul class="facts">
-                <li>Ini bukan terumbu karang dari kartu pos. Ini adalah ladang observasi hidup untuk melihat apa yang benar-benar bertahan dan beradaptasi.</li>
-                <li>Kami menggunakan restorasi bukan hanya sebagai tindakan, tetapi juga sebagai cara untuk mengamati karang mana yang terus tumbuh di bawah tekanan.</li>
-                <li>Ini memberi peserta Discovery maupun Research pemahaman yang lebih nyata dan bermakna tentang ketahanan terumbu karang.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="site-card">
-            <img src="assets/editable/site-padang-bai.jpg" alt="Lokasi restorasi terumbu karang di Padang Bai">
-            <div class="content">
-              <div class="eyebrow">Padang Bai / Lokasi Mitra Livingseas</div>
-              <h3>Di mana skala menjadi nyata</h3>
-              <p>Di Padang Bai, peserta melihat ritme restorasi yang berbeda: akses perahu, lokasi yang lebih luas, dan konteks restorasi praktis lainnya di dalam Bali.</p>
-              <ul class="facts">
-                <li>Lebih dari 500.000 karang telah ditanam di sana oleh mitra kami.</li>
-                <li>Lokasi ini membantu peserta memahami perbedaan antara taman yang berfokus pada penelitian dan lanskap restorasi yang lebih besar.</li>
-                <li>Bagi peserta satu bulan penuh, lokasi kedua ini menambah perspektif, kontras, dan relevansi lapangan yang lebih kuat.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-        <div class="quote-panel" style="margin-top:14px">
-          <div class="kicker">Mengapa ini penting</div>
-          <div class="quote">Kami sangat tertarik pada karang-karang yang terus bertahan dan tumbuh di mana kondisinya tidak mudah.</div>
-          <p class="sub" style="margin-top:14px">Itulah sebagian dari apa yang membuat Coral Sense terasa indah, nyata, dan berguna secara profesional pada saat yang bersamaan.</p>
-        </div>
-      </section>
-
-	      <section>
-	        <div class="section-head">
-	          <div class="kicker">Ritme Hari Penyelaman Bersama</div>
-	          <h2>Bagaimana hari penyelaman restorasi terumbu karang biasanya berlangsung</h2>
-	          <p>Struktur ini berlaku untuk kedua paket. Tingkat kedalaman berbeda antara Discovery dan Research, tetapi hari penyelaman itu sendiri mengikuti ritme yang sama, penuh dan terpandu.</p>
-	        </div>
-	        <div class="facts-grid">
-	          <div class="fact-card blue">
-	            <h4>08:00 - 09:00</h4>
-	            <p>Berkumpul, persiapan perlengkapan, kopi, dan briefing tim pertama sebelum hari masuk ke alur restorasi.</p>
-	          </div>
-	          <div class="fact-card">
-	            <h4>09:00 - 10:00</h4>
-	            <p>Coral Talk atau sesi pembelajaran konservasi kelautan. Di sinilah tim memperkenalkan lokasi, fokus misi, dan apa yang akan diamati peserta di dalam air.</p>
-	          </div>
-	          <div class="fact-card blue">
-	            <h4>10:00 - 12:30</h4>
-	            <p>Blok penyelaman pertama: penanaman karang, partisipasi restorasi, perawatan terumbu karang, observasi terpandu, dan pemahaman langsung tentang cara kerja proyek di bawah air.</p>
-	          </div>
-	          <div class="fact-card">
-	            <h4>12:30 - 14:30</h4>
-	            <p>Istirahat makan siang dan pemulihan. Ini adalah jeda antara penyelaman, dengan waktu untuk beristirahat, berbagi pengamatan, dan mempersiapkan sesi air kedua.</p>
-	          </div>
-	          <div class="fact-card blue">
-	            <h4>14:30 - 16:30</h4>
-	            <p>Penyelaman kedua: peserta kembali ke terumbu karang untuk sesi terpandu lainnya, membangun kepercayaan diri melalui pengulangan, observasi, dan partisipasi praktis.</p>
-	          </div>
-	          <div class="fact-card">
-	            <h4>16:30 - 17:00</h4>
-	            <p>Hari berakhir dengan debriefing, kebersamaan, dan waktu bebas. Sebagian besar hari penyelaman selesai sekitar pukul 4-5 sore, sering kali dengan momen matahari terbenam yang tenang bersama-sama.</p>
-	          </div>
-	        </div>
-	        <div class="card soft" style="margin-top:14px">
-	          <div class="kicker">Kemungkinan Misi di Seluruh Program</div>
-	          <ul class="facts">
-	            <li>Penanaman karang dan penempatan fragmen pada struktur restorasi</li>
-	            <li>Pembersihan dan perawatan struktur bawah air</li>
-	            <li>Penyelamatan fragmen karang yang sesuai untuk penempatan di masa depan</li>
-	            <li>Persiapan peralatan, tali, tanda, keranjang, dan material lapangan</li>
-	            <li>Dukungan logistik lokasi sebelum dan setelah sesi laut</li>
-	            <li>Observasi terumbu karang terpandu dan pengenalan keanekaragaman hayati lokal</li>
-	            <li>Dokumentasi foto, catatan lapangan, dan log observasi sederhana</li>
-	            <li>Dukungan selama Hari Restorasi Terumbu Karang dan kegiatan edukatif</li>
-	          </ul>
-	        </div>
-	        <div class="card">
-	          <div class="kicker">Misi Tambahan Sisi Penelitian</div>
-	          <ul class="facts">
-	            <li>Protokol foto dan catatan visual yang lebih terstruktur</li>
-	            <li>Mendeteksi anomali, tekanan karang, dan pola pemulihan</li>
-	            <li>Metode pemantauan dasar dan interpretasi awal tentang apa yang ditunjukkan lokasi</li>
-	            <li>Mengorganisasi arsip gambar, catatan, dan material penelitian setelah penyelaman</li>
-	            <li>Pengenalan kelompok karang, diskusi dinamika terumbu karang, dan observasi ikan di sekitar taman</li>
-	            <li>Tinjauan dan pengorganisasian material lapangan berbantuan AI dalam jalur berorientasi penelitian</li>
-	          </ul>
-	        </div>
-	        <div class="card soft" style="margin-top:14px">
-	          <div class="kicker">Tambahan Satu Bulan Penuh</div>
-	          <ul class="facts">
-	            <li>Partisipasi satu bulan penuh mungkin termasuk satu perjalanan ke lokasi restorasi terumbu karang kedua di Padang Bai</li>
-	            <li>Ini termasuk dua penyelaman di sana dan transfer antar lokasi proyek</li>
-	          </ul>
-	        </div>
-	      </section>
-
-	      <section id="general-program">
-	        <div class="section-head">
-	          <div class="kicker">Program Satu</div>
-	          <h2>Magang Restorasi Terumbu Karang Discovery</h2>
-	          <p>Ini adalah format magang yang lebih ringan dan lebih terbuka. Dibuat untuk orang-orang yang ingin pengalaman Bali yang bermakna dengan tujuan laut yang nyata: restorasi terumbu karang terpandu, pengetahuan baru, hari penyelaman, dan cukup kebebasan untuk menikmati pulau dengan ritme mereka sendiri. Kamu tidak perlu gelar biologi atau latar belakang ilmiah untuk bergabung. Yang lebih penting di sini adalah energi, rasa ingin tahu, dan kecintaan nyata pada laut.</p>
-		        </div>
-		        <div class="gallery two">
-		          <img class="tall" src="assets/editable/discovery-gallery-1.jpg" alt="Penyelam bekerja dengan fragmen karang di air biru jernih">
-		          <img class="tall" src="assets/editable/discovery-gallery-2.jpg" alt="Penyelam mengamati struktur restorasi terumbu karang di bawah air">
-		        </div>
-	        <div class="detail-grid" style="margin-top:14px">
-	          <div class="card soft">
-	            <div class="kicker">Untuk Siapa</div>
-	            <div class="tagline">Magang Bali yang ramah pemula untuk orang-orang yang ingin melakukan sesuatu yang nyata, berkesan, dan terhubung dengan laut</div>
-	            <ul class="facts">
-	              <li>Terbuka untuk pemula, marketer, kreator, mahasiswa dari bidang lain, pelancong bertujuan, peserta citizen science, dan pecinta laut yang termotivasi</li>
-	              <li>Tidak diperlukan pengalaman biologi kelautan atau restorasi terumbu karang sebelumnya</li>
-	              <li>Kamu tidak perlu resume khusus; kami mencari orang dengan semangat, energi, dan minat yang tulus</li>
-	              <li>Cocok untuk 2-4 minggu atau lebih, dengan format bulanan yang ditampilkan di sini sebagai referensi paling jelas</li>
-	            </ul>
-	          </div>
-	          <div class="card">
-	            <div class="kicker">Apa yang Termasuk dalam Pengalaman Ini</div>
-	            <ul class="facts">
-	              <li>8 penyelaman scuba per bulan</li>
-	              <li>Sesi restorasi terumbu karang di bawah air</li>
-	              <li>Partisipasi penanaman karang dan perawatan struktur</li>
-	              <li>Satu makan siang per minggu di hari penyelaman</li>
-	              <li>Ceramah restorasi terumbu karang dan sesi konservasi kelautan</li>
-	              <li>Akomodasi di Coral House</li>
-	              <li>Jemput bandara pergi dan pulang</li>
-	              <li>Kaos Coral Sense, SUP / papan paddle, masker, fins, dan perlengkapan snorkeling</li>
-	              <li>Panduan selama tinggal, dengan bantuan mengatur perjalanan sekitar, fun dive, kafe, dan pengalaman pulau opsional sesuai permintaan</li>
-	              <li>Kesempatan untuk berpartisipasi dalam jenis partisipasi terumbu karang nyata yang dilakukan tim kami: mempersiapkan, membawa, menempatkan, dan merawat struktur di laut</li>
-	            </ul>
-	          </div>
-	        </div>
-	        <div class="card soft" style="margin-top:14px">
-	          <div class="kicker">Seperti Apa Rasanya Format Ini</div>
-	          <div class="tagline">Bayangkan seperti perjalanan dengan makna: cukup terstruktur untuk terasa terpandu, cukup bebas untuk tetap menjadikan Bali milikmu sendiri</div>
-	          <ul class="facts">
-	            <li>Sebagian besar minggu mencakup satu hari penyelaman utama, dengan banyak waktu bebas di sekitarnya untuk istirahat, kafe, air terjun, pura, perjalanan sekitar, atau ritme kreatifmu sendiri</li>
-	            <li>Kamu bergabung dalam misi nyata di laut, tetapi keseluruhan ritme tetap lebih ringan dan santai dibandingkan jalur penelitian</li>
-	            <li>Ini cara yang menyenangkan dan sosial untuk menikmati Bali sambil melakukan sesuatu yang terasa benar-benar berharga</li>
-	            <li>Peserta sering berakhir berbagi matahari terbenam, makan bersama, dan momen pulau yang santai; terkadang ritme juga mencakup suasana barbecue atau api unggun kasual ketika waktu dan energi grup mendukung</li>
-	            <li>Jika kamu ingin menjelajahi lebih banyak Bali selama program, kami bisa membantu mengorganisir ide, logistik lokal, dan ekskursi opsional</li>
-	          </ul>
-	        </div>
-	        <div class="card">
-	          <div class="kicker">Tidak Berpengalaman? Tetap Bisa</div>
-	          <ul class="facts">
-	            <li>Jalur ini dirancang agar mudah diakses dan menyenangkan bahkan jika ini adalah langkah pertamamu yang lebih dalam ke konservasi kelautan</li>
-	            <li>Kami akan mengajarimu alur proyek, dasar-dasar partisipasi restorasi terumbu karang, dan cara kerja hari laut langkah demi langkah</li>
-	            <li>Open Water tetap diperlukan untuk bagian di dalam air dari program, tetapi jika kamu belum memilikinya, kamu bisa menyelesaikan kursus sebelum magang atau selama hari-hari pertamamu di Bali dengan biaya tambahan</li>
-	            <li>Tujuannya adalah membiarkanmu mengalami terumbu karang bukan sebagai penonton, tetapi sebagai seseorang yang tangannya sendiri benar-benar berkontribusi pada apa yang tumbuh di sana</li>
-	          </ul>
-	        </div>
-	        <div class="card blue price-panel" style="margin-top:14px">
-	          <div class="kicker">Harga Program</div>
-	          <div class="price">USD 1.100</div>
-	          <p class="price-note">17.000.000 IDR / bulan</p>
-	          <ul class="facts">
-	            <li>Terbaik untuk peserta yang menginginkan magang Bali yang lebih ringan dan ramah gaya hidup dengan tujuan laut yang nyata</li>
-	            <li>Format bulanan ditampilkan di sini, dengan masa tinggal lebih pendek tersedia mulai dari 2 minggu</li>
-	            <li>Pilihan tepat jika kamu menginginkan tujuan, penyelaman, pengetahuan baru, dan pengalaman pulau yang berkesan dalam satu format</li>
-	            <li>Bagus untuk peserta yang menginginkan perasaan "kantor terbaik di dunia," tetapi dengan tujuan konservasi nyata di baliknya</li>
-	          </ul>
-	          <div class="cta-row">
-	            <a class="button" href="apply.html?track=discovery">Daftar untuk Discovery</a>
-	          </div>
-	        </div>
-	      </section>
-
-      <section id="research-program">
-        <div class="section-head">
-          <div class="kicker">Program Dua</div>
-          <h2>Magang Biologi Kelautan &amp; Penelitian</h2>
-          <p>Ini adalah jalur yang lebih profesional. Dirancang untuk mahasiswa biologi kelautan, konservasi kelautan, ilmu lingkungan, dan bidang terkait atau peserta awal karier yang membutuhkan praktik lapangan yang mendukung pendidikan, kepercayaan diri, dan arah karier ke depan.</p>
-        </div>
-        <div class="gallery">
-	          <img class="wide" src="assets/editable/research-gallery-1.jpg" alt="Penyelam mendokumentasikan struktur restorasi terumbu karang di bawah air">
-	          <img class="wide" src="assets/editable/research-gallery-2.jpg" alt="Struktur restorasi terumbu karang di bawah air dengan ikan dan pertumbuhan karang">
-        </div>
-        <div class="detail-grid" style="margin-top:14px">
-          <div class="card soft">
-            <div class="kicker">Mengapa Ini Penting Secara Akademik</div>
-            <div class="tagline">Ini membantu menutup kesenjangan antara menjadi penyelam rekreasi dan menjadi peserta lapangan yang lebih pengamat dan disiplin</div>
-            <ul class="facts">
-              <li>Berguna untuk mahasiswa yang menginginkan relevansi lapangan, bukan hanya teori</li>
-              <li>Membangun literasi pemantauan, pemahaman restorasi, dan kepercayaan diri profesional</li>
-              <li>Mendukung nilai CV melalui partisipasi nyata dalam proyek yang hidup</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="kicker">Apa yang Termasuk</div>
-            <ul class="facts">
-              <li>16 penyelaman berorientasi sains dan restorasi dalam 4 minggu</li>
-              <li>Perlengkapan selam termasuk</li>
-              <li>Presentasi pelatihan tentang restorasi terumbu karang, konservasi kelautan, pemikiran penelitian, dan alur kerja analisis berbantuan AI</li>
-              <li>Dua makan siang per minggu di hari penyelaman</li>
-              <li>Akomodasi, jemput bandara, transfer antar lokasi, kaos Coral Sense, SUP, dan perlengkapan snorkeling</li>
-              <li>Perpanjangan dimungkinkan untuk peserta yang ingin tinggal lebih lama dan mendukung arah penelitian lebih mendalam</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card soft" style="margin-top:14px">
-          <div class="kicker">Kunjungan Lokasi Tambahan</div>
-          <ul class="facts">
-            <li>Partisipasi satu bulan penuh termasuk kunjungan ke lokasi restorasi terumbu karang kedua di Padang Bai</li>
-            <li>Peserta mengalami dua penyelaman di sana dan melihat konteks restorasi yang berbeda bersama taman penelitian Coral Sense</li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="kicker">Struktur Empat Minggu</div>
-          <h2>Apa yang dibangun mahasiswa biologi kelautan minggu demi minggu</h2>
-          <p>Program ini menjadi lebih berharga karena setiap minggu menambahkan lapisan baru: logika restorasi terlebih dahulu, lalu perawatan dan pemantauan terumbu karang, kemudian data dan interpretasi, dan akhirnya penerapan yang lebih mandiri dari semua yang telah dipelajari.</p>
-        </div>
-        <div class="weeks-grid">
-          <div class="week-card">
-            <div class="week-label">Minggu 1</div>
-            <h4>Teori dan praktik restorasi</h4>
-            <p>Peserta mempelajari dasar-dasar restorasi terumbu karang, logistik proyek, dan bagaimana pilihan restorasi dibuat di bawah batasan ekologi dan operasional nyata. Mereka mulai dengan bergabung dalam penanaman, perawatan terumbu karang, dan partisipasi restorasi di bawah air.</p>
-          </div>
-          <div class="week-card blue">
-            <div class="week-label">Minggu 2</div>
-            <h4>Perawatan, pembersihan, dan metode pemantauan pertama</h4>
-            <p>Fokus beralih ke perawatan struktur, mendeteksi ancaman terhadap fragmen karang, mendokumentasikan anomali, membangun protokol foto, dan memahami indikator awal seperti pertumbuhan, kelangsungan hidup, dan pemulihan.</p>
-          </div>
-          <div class="week-card">
-            <div class="week-label">Minggu 3</div>
-            <h4>Data, identifikasi karang, dan alur kerja berbantuan AI</h4>
-            <p>Peserta mulai mengorganisasi material secara lebih sistematis: kelompok karang, dinamika terumbu karang, ikan dan kehidupan lain yang muncul di sekitar taman, arsip gambar, catatan, dan catatan terstruktur. Minggu ini juga memperkenalkan bagaimana alat berbantuan AI dapat mendukung material penelitian dan tinjauan anomali.</p>
-          </div>
-          <div class="week-card blue">
-            <div class="week-label">Minggu 4</div>
-            <h4>Interpretasi, penerapan, dan komunikasi</h4>
-            <p>Pada minggu terakhir, mahasiswa menerapkan apa yang telah mereka pelajari secara lebih mandiri di bawah air, mendukung interpretasi pengamatan bersama tim, dan dapat bergabung dalam briefing edukatif singkat selama Hari Restorasi Terumbu Karang jika sesuai.</p>
-          </div>
-        </div>
-        <div class="card blue price-panel" style="margin-top:14px">
-          <div class="kicker">Harga Program</div>
-          <div class="price">USD 1.580</div>
-          <p class="price-note">24.500.000 IDR / bulan</p>
-          <ul class="facts">
-            <li>Dibangun untuk peserta biologi kelautan, konservasi kelautan, ilmu lingkungan, dan bidang terkait yang membutuhkan relevansi lapangan yang lebih kuat</li>
-            <li>Format minimum yang disarankan: 4 minggu</li>
-          </ul>
-          <div class="cta-row">
-            <a class="button" href="apply.html?track=research">Daftar untuk Research</a>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="kicker">Visual Lapangan</div>
-          <h2>Tangan di terumbu karang, mata pada sistem</h2>
-          <p>Coral Sense tidak dibangun di sekitar satu tindakan yang berulang. Peserta bergerak antara restorasi, observasi, dokumentasi, perawatan, dan interpretasi di dalam konteks terumbu karang hidup yang sama.</p>
-        </div>
-        <div class="gallery two">
-	          <img class="square" src="assets/editable/field-1.jpg" alt="Penyelam bekerja dekat dengan fragmen karang di bawah air">
-	          <img class="square" src="assets/editable/field-2.jpg" alt="Penyelam mengamati struktur restorasi terumbu karang di bawah air">
-	          <img class="square" src="assets/editable/field-3.jpg" alt="Penyelam mencatat di lokasi restorasi terumbu karang di bawah air">
-	          <img class="square" src="assets/editable/field-4.jpg" alt="Freediver di atas terumbu karang">
-        </div>
-      </section>
-
-	      <section>
-	        <div class="section-head">
-	          <div class="kicker">Coral House</div>
-	          <h2>Gambaran lebih lengkap tentang tempat tinggal peserta sebenarnya</h2>
-	          <p>Peserta tinggal di Coral House, basis program yang digunakan selama magang. Ini tidak diposisikan sebagai resor mewah. Ini adalah tempat yang tenang dan bersuasana untuk tidur nyenyak, memulihkan diri setelah penyelaman, mempersiapkan hari berikutnya, dan hidup lebih dekat dengan ritme Bali Timur. Di bawah ini adalah gambaran visual yang lebih lengkap agar peserta dapat memahami rumah ini dengan lebih jelas sebelum tiba.</p>
-	        </div>
-	        <div class="split-callout">
-	          <div class="card blue">
-	            <ul class="facts">
-	              <li>Kamar pribadi atau asrama, tergantung ketersediaan dan format</li>
-	              <li>Ruang yoga dan area bersama</li>
-	              <li>Lingkungan tenang yang cocok untuk istirahat, sarapan, waktu laptop, dan refleksi</li>
-	              <li>Cukup dekat ke Amed untuk kafe, bar, yoga, gym, paddle boarding, dan fun dive</li>
-	            </ul>
-	          </div>
-	          <div class="card soft">
-	            <div class="kicker">Gambaran Visual Jujur</div>
-	            <div class="tagline">Teras, kamar, ruang bersama, pemandangan, dan suasana bukit yang lebih lambat di sekitar rumah</div>
-	          </div>
-		        </div>
-	        <div class="collage-duo" style="margin-top:14px">
-	          <div class="collage-board">
-	            <div class="kicker">Pemandangan &amp; Suasana</div>
-	            <div class="board-grid">
-	              <img class="portrait" src="assets/editable/house-atmo-1.jpg" alt="Dek matahari terbenam dan pemandangan gunung berapi dari Coral House">
-	              <img class="portrait" src="assets/editable/house-atmo-2.jpg" alt="Suasana potret malam di Coral House">
-	              <img src="assets/editable/house-atmo-3.jpg" alt="Jembatan pohon dan detail arsitektur di Coral House">
-	              <img src="assets/editable/house-atmo-4.jpg" alt="Balkon dan arsitektur di Coral House">
-	              <img src="assets/editable/house-atmo-5.jpg" alt="Platform pandang dan lanskap sekitar dekat Coral House">
-	            </div>
-	          </div>
-	          <div class="collage-board">
-	            <div class="kicker">Kamar &amp; Ruang Bersama</div>
-	            <div class="board-grid">
-	              <img src="assets/editable/house-room-1.jpg" alt="Interior kamar pribadi di Coral House">
-	              <img src="assets/editable/house-room-2.jpg" alt="Ruang lounge bersama dengan tekstur batu dan cat di Coral House">
-	              <img src="assets/editable/house-room-3.jpg" alt="Teras kayu dan area duduk di Coral House">
-	              <img src="assets/editable/house-room-4.jpg" alt="Kamar pribadi biru di Coral House">
-	              <img src="assets/editable/house-room-5.jpg" alt="Kamar pribadi bernada hangat di Coral House">
-	              <img src="assets/editable/house-room-6.jpg" alt="Ruang bersama bergaya lounge dan kamar di Coral House">
-	              <img src="assets/editable/house-room-7.jpg" alt="Lounge terbuka terinspirasi karang di Coral House">
-	            </div>
-	          </div>
-	        </div>
-	        <div class="collage-board" style="margin-top:14px">
-	          <div class="kicker">Lebih banyak kehidupan sehari-hari di sini</div>
-	          <div class="board-grid board-grid-wide">
-	            <img src="assets/house-photo-01.jpg" alt="Dek matahari terbenam dan pemandangan gunung berapi di Coral House">
-	            <img class="portrait" src="assets/house-photo-02.jpg" alt="Suasana matahari terbenam di sekitar Coral House">
-	            <img src="assets/house-photo-03.jpg" alt="Detail jalur arsitektur di Coral House">
-	            <img src="assets/house-photo-04.jpg" alt="Interior kamar pribadi di Coral House">
-	            <img src="assets/house-photo-05.jpg" alt="Ruang bersama dari batu dan warna di Coral House">
-	            <img src="assets/house-photo-06.jpg" alt="Teras lounge di Coral House">
-	          </div>
-	        </div>
-	        <div class="video-grid" style="margin-top:14px">
-	          <a class="video-card" href="https://www.youtube.com/watch?v=g7ksnaJmqY4&t=3s" target="_blank" rel="noopener noreferrer">
-	            <img src="assets/editable/video-thumb-1.jpg" alt="Video bukit dan teras terbuka Coral House di YouTube">
-	            <div class="content">
-	              <div class="kicker">Tur Video 1</div>
-	              <h4>Teras, suasana bukit, dan pemandangan lebih luas</h4>
-	              <p>Link YouTube stabil. Terbuka di browser mana pun di luar landing page.</p>
-	              <span class="button small">Tonton di YouTube</span>
-	            </div>
-	          </a>
-	          <a class="video-card" href="https://www.youtube.com/watch?v=GNcaIYZFncg" target="_blank" rel="noopener noreferrer">
-	            <img src="assets/editable/video-thumb-2.jpg" alt="Video interior dan suasana terbuka Coral House di YouTube">
-	            <div class="content">
-	              <div class="kicker">Tur Video 2</div>
-	              <h4>Suasana Coral House, interior, dan ruang hidup</h4>
-	              <p>Link YouTube stabil. Mudah dibuka dari ponsel, desktop, atau pesan bersama.</p>
-	              <span class="button small">Tonton di YouTube</span>
-	            </div>
-	          </a>
-	        </div>
-	        <div class="card soft" style="margin-top:14px">
-	          <div class="kicker">Link Video Langsung</div>
-	          <ul class="facts">
-	            <li><a href="https://www.youtube.com/watch?v=g7ksnaJmqY4&t=3s" target="_blank" rel="noopener noreferrer">Video Coral House 1</a></li>
-	            <li><a href="https://www.youtube.com/watch?v=GNcaIYZFncg" target="_blank" rel="noopener noreferrer">Video Coral House 2</a></li>
-	          </ul>
-	        </div>
-	      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="kicker">Informasi Praktis</div>
-	          <h2>Logistik yang jelas untuk peserta</h2>
-        </div>
-        <div class="facts-grid">
-          <div class="fact-card">
-            <h4>Visa dan penerbangan</h4>
-            <p>Penerbangan dan visa diatur secara mandiri. Kedatangan melalui Denpasar. Coral Sense dapat berbagi kontak visa terpercaya jika diperlukan. Seorang sopir menjemput peserta di bandara dan membawa mereka ke Coral House.</p>
-          </div>
-          <div class="fact-card blue">
-            <h4>Open Water</h4>
-            <p>Open Water diperlukan untuk bagian di dalam air dari program. Peserta tanpa sertifikat dapat menyelesaikan kursus sebelum magang dimulai atau di hari-hari pertama setelah tiba. Biaya tipikal: sekitar USD 320-350 tambahan.</p>
-          </div>
-          <div class="fact-card">
-            <h4>Skuter, SIM, dan telepon</h4>
-            <p>Bisa mengendarai skuter sangat direkomendasikan, terutama untuk masa tinggal yang lebih lama. Tidak ada transportasi umum yang nyata di sini. Kartu SIM turis biasanya seharga sekitar USD 9-18. Jika seseorang tinggal di Indonesia lebih dari 3 bulan, pendaftaran IMEI mungkin diperlukan untuk penggunaan ponsel penuh.</p>
-          </div>
-          <div class="fact-card blue">
-            <h4>Makanan dan waktu bebas</h4>
-            <p>Makan di warung lokal biasanya seharga sekitar USD 1-3 per hidangan. Di kafe bergaya Eropa dan tempat yang lebih modern, makan biasanya sekitar USD 4-9, sementara kopi, jus, atau smoothie sering sekitar USD 1-3. Anggaran makanan yang nyaman biasanya sekitar USD 120-220 per bulan jika seseorang mencampur memasak sendiri dengan tempat lokal, atau sekitar USD 220-400 per bulan jika mereka lebih sering memilih kafe dan pesan antar.</p>
-          </div>
-          <div class="fact-card">
-            <h4>Kehidupan di sekitar program</h4>
-            <p>Kami bisa membantu dengan logistik lokal, kartu SIM, kontak skuter, penyelaman ekstra, freediving, kafe terdekat, perjalanan air terjun, pura, dan hari opsional di sekitar Bali. Tujuannya adalah membuat magang terasa jelas dan terdukung, bukan membingungkan saat kamu tiba.</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="kicker">Kebijakan Pemesanan</div>
-          <h2>Pesan tempatmu lebih awal</h2>
-        </div>
-        <div class="card blue">
-          <div class="kicker">Cara kerjanya</div>
-          <ul class="facts">
-            <li>Langkah 1: isi formulir pendaftaran dengan tanggal, latar belakang, level selam, dan CV-mu.</li>
-            <li>Langkah 2: kami meninjau kesesuaian dan membalas dengan jalur yang tepat, ketersediaan, dan langkah selanjutnya.</li>
-            <li>Langkah 3: jika format dikonfirmasi, kami mengirimkan instruksi pembayaran dan detail kedatangan secara personal.</li>
-          </ul>
-        </div>
-        <div class="card soft" style="margin-top:14px">
-          <div class="kicker">Kebijakan Pemesanan</div>
-          <ul class="facts">
-            <li>Pembayaran penuh 100% diperlukan untuk memesan tempat</li>
-            <li>Pembayaran harus diselesaikan paling lambat 14 hari sebelum kedatangan</li>
-            <li>Instruksi pembayaran dibagikan secara personal setelah tanggal dan format program dikonfirmasi</li>
-            <li>Asuransi diperlukan dan tidak termasuk</li>
-          </ul>
-          <div class="cta-row">
-            <a class="button" href="apply.html">Buka Formulir Pendaftaran</a>
-            <a class="button secondary" href="https://wa.me/6281248368288?text=Hello%20Coral%20Sense%2C%20I%27m%20interested%20in%20your%20internship%20programs." target="_blank" rel="noopener noreferrer">Pertanyaan Cepat</a>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="kicker">FAQ</div>
-          <h2>Pertanyaan yang paling sering diajukan</h2>
-        </div>
-        <div class="faq-grid">
-          <div class="faq-card">
-            <h4>Bagaimana cara mendaftar?</h4>
-            <p>Buka formulir pendaftaran, beritahu kami tanggal, latar belakang, level selam, dan unggah CV-mu. Kami meninjau setiap lamaran dan membalas secara personal.</p>
-          </div>
-          <div class="faq-card blue">
-            <h4>Apakah saya perlu pengalaman sebelumnya?</h4>
-            <p>Tidak diperlukan pengalaman restorasi terumbu karang sebelumnya untuk paket pertama. Untuk paket penelitian, relevansi akademik dan motivasi lebih penting daripada sudah memiliki rekam jejak praktis yang panjang.</p>
-          </div>
-          <div class="faq-card">
-            <h4>Bisakah saya datang tanpa Open Water?</h4>
-            <p>Ya, tetapi kursus Open Water harus diselesaikan sebelum bergabung dalam bagian di dalam air dari program. Bisa dilakukan secara lokal sebagai tambahan.</p>
-          </div>
-          <div class="faq-card blue">
-            <h4>Apakah ini pekerjaan berbayar?</h4>
-            <p>Tidak. Ini adalah format partisipasi edukatif berbasis biaya. Peserta membayar untuk magang dan menerima pelatihan, penyelaman, pencelupan dalam proyek, dan dukungan terstruktur.</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="kicker">Daftar &amp; Kontak</div>
-          <h2>Gunakan formulir terlebih dahulu. WhatsApp dan email sebagai cadangan.</h2>
-        </div>
-        <div class="card contact-list">
-          <p class="sub" style="margin-top:0">Formulir adalah cara termudah bagi kami untuk meninjau lamaran dengan benar. Jika kamu hanya punya pertanyaan cepat terlebih dahulu, WhatsApp dan email tetap terbuka.</p>
-          <ul class="facts">
-            <li>Instagram: <a href="https://www.instagram.com/coralsense.bali/" target="_blank" rel="noopener noreferrer">@coralsense.bali</a></li>
-	            <li>Email: <a href="mailto:coralsense.bali@gmail.com?subject=Coral%20Sense%20Internship">coralsense.bali@gmail.com</a></li>
-            <li>WhatsApp: <a href="https://wa.me/6281248368288?text=Hello%20Coral%20Sense%2C%20I%27m%20interested%20in%20your%20internship%20programs." target="_blank" rel="noopener noreferrer">+62 812-48-36-82-88</a></li>
-          </ul>
-          <div class="cta-row">
-	            <a class="button" href="apply.html">Buka Formulir Pendaftaran</a>
-            <a class="button secondary" href="https://wa.me/6281248368288?text=Hello%20Coral%20Sense%2C%20I%27m%20interested%20in%20your%20internship%20programs." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="kicker">Penutup</div>
-          <h2>Berguna untuk studi. Nyata dalam praktik. Indah dalam setting.</h2>
-        </div>
-	        <div class="gallery two">
-		          <img class="tall" src="assets/editable/closing-1.jpg" alt="Penyelam scuba memulihkan karang di bawah air">
-		          <img class="tall" src="assets/editable/closing-2.jpg" alt="Penyelam hitam putih membawa fragmen karang di bawah air">
-	        </div>
-	      </section>
-    </main>
-
-    <footer class="footer">
-      Coral Sense / Magang di Bali / Konservasi Kelautan, Restorasi Terumbu Karang, dan Partisipasi Penelitian
-    </footer>
+      </div>
+    </div>
   </div>
+</section>
+
+<!-- PHOTO BREAK — p-break1.jpg: фото 5 (команда делает survey, широкий кадр) -->
+<section class="flush">
+  <img src="assets/editable/research-gallery-1.jpg" alt="Research team conducting reef survey" class="pb" />
+</section>
+
+<div class="philosophy">
+  <blockquote>"Kami tidak memperbaiki laut.<br/>Kami belajar darinya — dan tumbuh bersamanya."</blockquote>
+  <p>Coral Sense bukan hanya tentang menanam karang. Ini tentang memulihkan hubungan kita dengan laut — melalui rasa ingin tahu, observasi nyata, dan kepedulian yang hanya muncul saat kita dekat dengan sesuatu yang hidup.</p>
+</div>
+
+<section id="sites" class="soft">
+  <div class="wrap">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Taman Karang Kami</span>
+        <h2 class="serif">2 taman.<br/>2 pendekatan yang berbeda.</h2>
+      </div>
+      <div>
+        <p class="lead">Kedua program mengunjungi kedua lokasi restorasi. Masing-masing menunjukkan wajah laut yang berbeda dan logika restorasi yang berbeda. Bersama-sama, keduanya memberi gambaran lengkap tentang bagaimana terumbu karang hidup — dan apa yang bisa kita lakukan untuknya.</p>
+      </div>
+    </div>
+    <div class="site-grid">
+      <div class="scard">
+        <!-- p-site1.jpg: фото 3 (дайвер с планшетом у коралловой структуры) -->
+        <img src="assets/editable/site-amed.jpg" alt="Coral Sense Research Garden in Amed" />
+        <div class="scard-body">
+          <span class="eyebrow" style="margin-bottom:.6rem;">Taman 01 · Amed</span>
+          <h3>Taman Penelitian Coral Sense</h3>
+          <p>Zona tekanan tinggi: sedimentasi, perubahan suhu, turbiditas musiman. Bukan terumbu kartu pos — ladang observasi hidup untuk melihat apa yang benar-benar bertahan di bawah tekanan. 10 menit dari Amed — penyu, selam bangkai kapal, freediving, pemandangan Gunung Agung.</p>
+          <ul style="margin-top:14px;font-size:.9rem;color:var(--ink-soft);">
+            <li>Taman sains — laboratorium bawah air</li>
+            <li>Menumbuhkan karang yang sangat tahan tekanan</li>
+            <li>6 eksperimen ilmiah simultan</li>
+            <li>Terletak di Segitiga Terumbu Karang</li>
+            <li>Teknologi AI untuk pemantauan terumbu karang</li>
+          </ul>
+        </div>
+      </div>
+      <div class="scard">
+        <!-- p-site2.jpg: фото 19 (два дайвера с ящиком с фрагментами, Padang Bai) -->
+        <img src="assets/editable/site-padang-bai.jpg" alt="Padang Bai coral restoration site" />
+        <div class="scard-body">
+          <span class="eyebrow" style="margin-bottom:.6rem;">Taman 02 · Padang Bai</span>
+          <h3>Padang Bai — Lokasi Mitra Livingseas</h3>
+          <p>Taman karang tanam terbesar di Bali, dibangun bersama mitra kami Livingseas. Lebih dari 500.000 karang ditanam, lebih dari 8.000 m² dasar laut dipulihkan. Di sinilah restorasi skala besar menjadi nyata.</p>
+          <ul class="scard-stats">
+            <li><span>Karang ditanam</span><span class="sv">500,000+</span></li>
+            <li><span>Dasar laut dipulihkan</span><span class="sv">8,000+ m²</span></li>
+            <li><span>Wilayah</span><span class="sv">Coral Triangle</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 5 underwater photos: turtle, coral colony, freediver, monitoring, love plaque -->
+    <div class="five-grid" style="margin-top:8px;">
+      <img src="assets/editable/discovery-gallery-1.jpg" alt="Coral restoration garden" style="object-position:center;" />
+      <img src="assets/editable/discovery-gallery-2.jpg" alt="Coral colony closeup" style="object-position:center top;" />
+      <img src="assets/editable/closing-2.jpg" alt="Freediver on surface" style="object-position:center top;" />
+      <img src="assets/editable/research-gallery-2.jpg" alt="Survey team underwater" style="object-position:center top;" />
+      <img src="assets/editable/video-thumb-1.jpg" alt="Coral structure with love plaque" style="object-position:center top;" />
+    </div>
+  </div>
+</section>
+
+<!-- DISCOVERY -->
+<section id="discovery" class="prog">
+  <div class="wrap">
+    <div class="prog-top">
+      <div>
+        <span class="tag-pill">Program 1 · Discovery</span>
+        <h2>Bali, dengan makna nyata — untuk siapa saja.</h2>
+        <p class="lead">Kamu tidak perlu gelar sains. Tidak perlu jadi penyelam. Tidak perlu berasal dari latar belakang tertentu. Format ini dibuat untuk pelancong, kreator, marketer, fotografer, mahasiswa dari bidang apa pun — siapa saja yang merasa tertarik pada laut.</p>
+        <div class="prog-meta"><span>Mulai 1 minggu</span><span>·</span><span>$1,200 / bulan</span><span>·</span><span>Semua latar belakang · Usia 18+</span></div>
+        <div class="callout"><strong>Seperti apa rasanya seminggu:</strong> Satu hari besar di laut per minggu — 2 penyelaman, penanaman karang, perawatan terumbu, sesi edukatif. Enam hari milikmu: istirahat, kafe, air terjun, proyek sendiri, atau lebih banyak menyelam.</div>
+      </div>
+      <!-- p-disc-hero.jpg: фото 8 (девушка сажает кораллы, синий костюм) -->
+      <div><img src="assets/editable/video-thumb-2.jpg" alt="Diver planting corals on restoration structure" /></div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>Untuk siapa</h3>
+        <ul>
+          <li>Orang-orang penasaran dari profesi apa pun — usia 18+</li>
+          <li>Pelancong yang ingin bulan mereka di Bali punya makna</li>
+          <li>Fotografer, kreator, marketer, penulis, mahasiswa dari bidang apa pun</li>
+          <li>Penyelam pemula — dan yang belum menyelam</li>
+          <li>Siapa saja yang ingin ikut berpartisipasi, bukan hanya menonton</li>
+        </ul>
+        <p style="margin-top:16px;font-size:.9rem;color:var(--ink-soft);">Tidak diperlukan pengalaman biologi kelautan. Kami mengajarimu segalanya di lokasi.</p>
+        <h3 style="margin-top:28px;">Belum punya sertifikat selam?</h3>
+        <p style="font-size:.9rem;color:var(--ink-soft);">Kamu bisa menyelesaikan Open Water di Bali sebelum program atau di hari-hari pertamamu (~$320–350). Belum punya sertifikat? Kamu juga bisa membantu dari permukaan — menyiapkan dan mengoper fragmen karang ke penyelam.</p>
+      </div>
+      <div>
+        <h3>What's included</h3>
+        <ul>
+          <li>8 scuba dives per month (2 per ocean day)</li>
+          <li>Coral planting, structure care &amp; guided observation</li>
+          <li>Coral Talks and marine conservation sessions every dive day</li>
+          <li>Accommodation at Coral House — 30 days included (shared room; private room &amp; villa available at extra cost)</li>
+          <li>1 lunch per week on dive day</li>
+          <li>Airport pickup and drop-off</li>
+          <li>Mask, fins, snorkeling gear and SUP for your stay</li>
+          <li>Coral Sense team t-shirt</li>
+          <li>Help with local logistics — cafés, extra dives, island exploration</li>
+        </ul>
+        <div class="price-box">
+          <div class="big">$1,200<span style="font-size:1.1rem;font-weight:400;color:var(--ink-soft);"> / bulan</span></div>
+          <div class="sub">30 hari akomodasi termasuk · Kamar bersama dalam harga dasar · Mulai 1 minggu</div>
+          <a href="#apply" class="btn btn-dark btn-full">Daftar untuk Discovery</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Discovery gallery: 5 разных фото -->
+    <div class="gallery">
+      <img src="assets/editable/disc-gal-1.jpg" alt="Coral restoration underwater" class="g1" style="object-position:center top;" />
+      <img src="assets/editable/disc-gal-2.jpg" alt="Diver at coral structure" class="g2" style="object-position:center top;" />
+      <img src="assets/editable/disc-gal-3.jpg" alt="Coral planting underwater" class="g3" style="object-position:center top;" />
+      <img src="assets/editable/disc-gal-4.jpg" alt="Reef restoration in Bali" class="g4" style="object-position:center top;" />
+      <img src="assets/editable/disc-gal-5.jpg" alt="Coral care in ocean" class="g5" style="object-position:center top;" />
+    </div>
+
+    <!-- Community row -->
+    <div class="community-row" style="margin-top:8px;">
+      <img src="assets/editable/comm-1.jpg" alt="Coral restoration team" />
+      <img src="assets/editable/comm-2.jpg" alt="Bali ocean life" />
+      <img src="assets/editable/house-atmo-3.jpg" alt="Sunset silhouette Bali" />
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK B&W — p-break2.jpg: фото 11 (B&W дайвер на больших рамах) -->
+<section class="flush">
+  <img src="assets/editable/house-atmo-4.jpg" alt="Diver at large coral restoration frames" class="pb bw" />
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="prog dark">
+  <div class="wrap">
+    <div class="prog-top">
+      <div>
+        <span class="tag-pill">Program 2 · Research</span>
+        <h2 class="serif" style="color:var(--cream);">Sebulan yang memperkaya pendidikanmu, CV-mu, dan cara berpikirmu sebagai ilmuwan masa depan.</h2>
+        <p class="lead" style="margin-top:16px;">Jika kamu sedang belajar biologi kelautan, konservasi, atau ilmu lingkungan — ini adalah jalur yang lebih dalam. Kamu menyelam lebih sering, mengamati terumbu sebagai sistem, dan mulai memperhatikan hal-hal yang dulu terlewat.</p>
+        <div class="prog-meta prog-meta-d"><span>Minimum 4 minggu</span><span>·</span><span>$1,680 / bulan</span><span>·</span><span>Mahasiswa biologi kelautan &amp; awal karier</span></div>
+        <div class="callout callout-d"><strong>Yang membuat ini berbeda:</strong> Eksperimen langsung — efek substrat, variabel kedalaman, kompetisi spesies. Kamu belajar membaca terumbu karang sebagai sistem, dan bagaimana alat berbantuan AI mendukung penelitian lapangan nyata.</div>
+      </div>
+      <!-- p-res-hero.jpg: фото 10 (дайвер пишет заметки, синий костюм) - B&W -->
+      <div><img src="assets/editable/house-atmo-5.jpg" alt="Diver writing research notes" class="bw" /></div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>Who it's for</h3>
+        <ul>
+          <li>Students of marine biology, marine conservation, environmental science, ecology</li>
+          <li>Early-career participants stepping into reef restoration and marine research</li>
+          <li>Divers ready to grow from recreational diving into disciplined field observation</li>
+        </ul>
+        <h3 style="margin-top:28px;">What you'll actually learn</h3>
+        <ul>
+          <li>How a real restoration project works under operational conditions</li>
+          <li>Reef care, structure maintenance, and restoration decision logic</li>
+          <li>Photo protocols, anomaly spotting, basic monitoring methods</li>
+          <li>Coral group identification and reef dynamics observation</li>
+          <li>How AI-assisted tools support field material analysis</li>
+          <li>The difference between recreational diving and science-oriented observation</li>
+        </ul>
+        <h3 style="margin-top:28px;">Requirements</h3>
+        <ul>
+          <li>Academic or early-career background in a related field</li>
+          <li>Open Water certification (can be completed locally)</li>
+          <li>Personal laptop · Ability to ride a scooter</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What's included</h3>
+        <ul>
+          <li>16 dives in 4 weeks — restoration &amp; science-oriented</li>
+          <li>Full dive equipment</li>
+          <li>Training sessions: coral restoration, marine conservation, research thinking, AI workflows</li>
+          <li>Both gardens: Amed Research Garden + Padang Bai</li>
+          <li>30 nights accommodation — shared room included; private room &amp; villa available at extra cost · Inter-site transfer</li>
+          <li>2 lunches per week on dive days</li>
+          <li>Airport pickup and drop-off · Mask, fins, snorkeling gear, SUP</li>
+          <li>Coral Sense team t-shirt · Certificate of Completion</li>
+        </ul>
+        <div class="price-box-d">
+          <div class="big">$1,680<span style="font-size:1.1rem;font-weight:400;color:rgba(245,241,236,.42);"> / bulan</span></div>
+          <div class="sub">30 malam akomodasi termasuk · Kamar bersama dalam harga dasar · Minimum 4 minggu</div>
+          <a href="#apply" class="btn btn-primary btn-full">Daftar untuk Research</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(60px,9vw,100px);">
+      <h2 class="serif" style="color:var(--cream);max-width:22ch;font-size:clamp(1.6rem,4vw,2.6rem);">Bagaimana empat minggu berlangsung.</h2>
+      <div class="weeks">
+        <div class="wk"><div class="wk-n">01</div><h4>Fondasi</h4><p>Kenali proyek, tim, terumbu, dan strukturnya. Bergabung dalam penanaman karang dan perawatan terumbu. Mulai pahami mengapa setiap keputusan restorasi dibuat seperti itu.</p></div>
+        <div class="wk"><div class="wk-n">02</div><h4>Perawatan &amp; Pemantauan</h4><p>Pemeliharaan struktur, ancaman terhadap fragmen, dokumentasi anomali, protokol foto, indikator awal pertumbuhan, kelangsungan hidup, dan pemulihan.</p></div>
+        <div class="wk"><div class="wk-n">03</div><h4>Data &amp; AI</h4><p>Atur pengamatan secara sistematis — kelompok karang, dinamika terumbu, ikan. Pelajari bagaimana alat AI membantu memproses material lapangan dan mendeteksi anomali.</p></div>
+        <div class="wk"><div class="wk-n">04</div><h4>Suaramu Sendiri</h4><p>Lebih mandiri di bawah air. Diskusi nyata dengan tim. Saat siap — briefing edukatif singkat selama Hari Restorasi Terumbu Karang.</p></div>
+      </div>
+    </div>
+
+    <!-- Research gallery B&W -->
+    <div class="gallery" style="margin-top:clamp(50px,7vw,80px);">
+      <img src="assets/editable/res-gal-1.jpg" alt="Diver at coral restoration structure" class="g1" style="object-position:center top;" />
+      <img src="assets/editable/res-gal-2.jpg" alt="Research dive in Bali" class="g2" style="object-position:center top;" />
+      <img src="assets/editable/res-gal-3.jpg" alt="Coral monitoring underwater" class="g3" style="object-position:center top;" />
+      <img src="assets/editable/res-gal-4.jpg" alt="Marine science field work" class="g4" style="object-position:center top;" />
+      <img src="assets/editable/res-gal-5.jpg" alt="Coral planting in ocean" class="g5" style="object-position:center top;" />
+    </div>
+  </div>
+</section>
+
+<!-- CORAL HOUSE -->
+<section id="coral-house" class="soft">
+  <div class="wrap">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Tempat Tinggalmu</span>
+        <h2 class="serif">Coral House.</h2>
+      </div>
+      <div>
+        <p class="lead">Bukan resor mewah. Bukan hostel. Basis yang tenang dan bersuasana dekat laut — cocok untuk istirahat, kerja laptop, kopi pagi, dan ritme Bali Timur yang lebih lambat.</p>
+        <p style="margin-top:14px;font-size:.9rem;color:var(--ink-soft);"><strong>Kedua program termasuk 30 malam akomodasi.</strong> Harga program sudah mencakup tinggal penuh di Coral House — tidak ada tagihan hotel terpisah. Tiga tingkat kenyamanan untuk dipilih, semuanya dalam jarak 100 meter satu sama lain dan dari laut.</p>
+        <div style="margin-top:16px;display:grid;gap:10px;">
+          <div style="padding:13px 16px;background:#fff;border-radius:8px;border:1px solid var(--line);display:flex;align-items:flex-start;gap:12px;">
+            <span style="font-size:1.1rem;flex-shrink:0;">🛏</span>
+            <div>
+              <div style="font-weight:700;font-size:.88rem;">Kamar bersama — 4 orang, tempat tidur susun <span style="color:var(--coral);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;">· Termasuk dalam harga program</span></div>
+              <div style="font-size:.82rem;color:var(--ink-soft);margin-top:3px;">Kamar bergaya hostel yang nyaman — persis apa yang kamu butuhkan saat sebagian besar waktumu untuk menyelam dan menjelajah.</div>
+            </div>
+          </div>
+          <div style="padding:13px 16px;background:#fff;border-radius:8px;border:1px solid var(--line);display:flex;align-items:flex-start;gap:12px;">
+            <span style="font-size:1.1rem;flex-shrink:0;">🚪</span>
+            <div>
+              <div style="font-weight:700;font-size:.88rem;">Kamar pribadi <span style="font-size:.72rem;color:var(--ink-soft);font-weight:600;">· Biaya tambahan kecil — tanya kami untuk harga</span></div>
+              <div style="font-size:.82rem;color:var(--ink-soft);margin-top:3px;">Ruangmu sendiri dengan privasi dan ketenangan. Bagus untuk kerja jarak jauh atau jika kamu lebih suka punya kamar sendiri.</div>
+            </div>
+          </div>
+          <div style="padding:13px 16px;background:#fff;border-radius:8px;border:1px solid var(--line);display:flex;align-items:flex-start;gap:12px;">
+            <span style="font-size:1.1rem;flex-shrink:0;">🌴</span>
+            <div>
+              <div style="font-weight:700;font-size:.88rem;">Kamar di vila — 100 m dari laut <span style="font-size:.72rem;color:var(--ink-soft);font-weight:600;">· Biaya tambahan — tanya kami untuk harga</span></div>
+              <div style="font-size:.82rem;color:var(--ink-soft);margin-top:3px;">Kamar pribadi di vila nyaman tepat di sebelah Coral House. Suasana paling santai — ideal jika kenyamanan penting bagimu.</div>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:12px;font-size:.78rem;color:var(--ink-soft);">Grup kecil — tempat terbatas. Ketersediaan kamar pribadi dan vila bervariasi berdasarkan tanggal. Hubungi kami dan kami akan menemukan pilihan yang tepat.</p>
+        <ul style="margin-top:14px;font-size:.9rem;color:var(--ink-soft);">
+          <li>Ruang yoga, kolam renang dalam dan area bersama · Dapur lengkap</li>
+          <li>10 menit ke Amed — kafe, fun dive, freediving, yoga, pasar</li>
+          <li>Pemandangan Gunung Agung · Taman tropis rimbun</li>
+        </ul>
+      </div>
+    </div>
+    <!-- House grid: main photo + 4 smaller -->
+    <div class="house-grid">
+      <!-- p-house-main.jpg: фото 6 коллаж или house-photo-01.jpg -->
+      <img src="assets/editable/house-atmo-1.jpg" alt="Coral House exterior" class="hm" />
+      <img src="assets/editable/house-room-1.jpg" alt="Private room" class="hs" />
+      <img src="assets/editable/house-room-3.jpg" alt="Sunset view" class="hs" />
+      <img src="assets/editable/house-room-2.jpg" alt="Common area" class="hs" />
+      <img src="assets/editable/house-room-4.jpg" alt="Warm room" class="hs" />
+    </div>
+    <!-- Extra house photos row -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:7px;">
+      <img src="assets/editable/house-room-6.jpg" alt="Coral House detail" style="aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:var(--r)" />
+      <img src="assets/editable/house-room-7.jpg" alt="Bali sunset" style="aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:var(--r)" />
+      <img src="assets/editable/house-room-5.jpg" alt="Sunset silhouette" style="aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:var(--r)" />
+      <img src="assets/editable/house-atmo-2.jpg" alt="House view" style="aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:var(--r)" />
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO APPLY -->
+<section>
+  <div class="wrap">
+    <div class="section-intro">
+      <div><span class="eyebrow">Cara Kerjanya</span><h2 class="serif">3 langkah sederhana.</h2></div>
+      <div><p class="lead">Tidak ada esai panjang, tidak ada proses rumit.<br/>Ceritakan sedikit tentang dirimu — kami yang melakukan sisanya.</p></div>
+    </div>
+    <div class="steps">
+      <div class="step"><img src="assets/editable/step-1.jpg" alt="Coral House atmosphere" class="step-img" /><div class="step-n">01</div><h3>Isi formulirnya</h3><p>Latar belakangmu, level selam, rencana kedatangan, dan email. Singkat dan sederhana — kurang dari 2 menit.</p></div>
+      <div class="step"><img src="assets/editable/step-2.jpg" alt="Team review" class="step-img" /><div class="step-n">02</div><h3>Kami tinjau &amp; balas</h3><p>Kami memeriksa lamaranmu dan membalas ke emailmu secara personal dalam 24–48 jam — dengan langkah selanjutnya, ketersediaan, dan jawaban atas pertanyaanmu.</p></div>
+      <div class="step"><img src="assets/editable/step-3.jpg" alt="Bali arrival" class="step-img" /><div class="step-n">03</div><h3>Pesan tempatmu</h3><p>Tanggal dikonfirmasi → kami kirim instruksi pembayaran. Pembayaran penuh 100% diperlukan 14 hari sebelum kedatangan.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="apply" class="soft">
+  <div class="narrow">
+    <span class="eyebrow">Daftar</span>
+    <h2 class="serif">Siap bergabung?</h2>
+    <p class="lead" style="margin-top:10px;">Fill in the short form. We’ll review it and write back personally — usually within 48 hours.</p>
+    <div class="form-card">
+      <form id="appForm" action="https://formspree.io/f/xkoaazby" method="POST">
+        <p style="display:none;"><input name="bot-field" /></p>
+
+        <div class="f-row">
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="name">Namamu <span>*</span></label>
+            <input type="text" name="name" id="name" class="fi" placeholder="Nama depan" required />
+          </div>
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="email">Email <span>*</span></label>
+            <input type="email" name="email" id="email" class="fi" placeholder="your@email.com" required />
+          </div>
+        </div>
+
+        <div class="f-row" style="margin-top:20px;">
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="country">Negara <span>*</span></label>
+            <input type="text" name="country" id="country" class="fi" placeholder="mis. Indonesia" required />
+          </div>
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="age">Usia <span>*</span></label>
+            <input type="number" name="age" id="age" class="fi" placeholder="mis. 24" min="18" max="75" required />
+          </div>
+        </div>
+
+        <div class="fg">
+          <label class="fl">Apakah kamu mahasiswa? <span>*</span></label>
+          <div class="pills">
+            <label class="pill-o"><input type="radio" name="student" value="Yes" required />Ya</label>
+            <label class="pill-o"><input type="radio" name="student" value="No" />Tidak</label>
+          </div>
+        </div>
+
+        <div class="fg">
+          <label class="fl">Latar belakang biologi kelautan / ilmu kelautan? <span>*</span></label>
+          <div class="pills">
+            <label class="pill-o"><input type="radio" name="marine_bio" value="Yes" required />Ya</label>
+            <label class="pill-o"><input type="radio" name="marine_bio" value="No" />Tidak</label>
+          </div>
+        </div>
+
+        <div class="fg">
+          <label class="fl">Latar belakang / bidangmu <span>*</span></label>
+          <div class="pills">
+            <label class="pill-o"><input type="radio" name="background" value="Marine Biology / Conservation" required />Biologi Kelautan</label>
+            <label class="pill-o"><input type="radio" name="background" value="Marketing / Business" />Marketing</label>
+            <label class="pill-o"><input type="radio" name="background" value="Photography / Video" />Foto / Video</label>
+            <label class="pill-o"><input type="radio" name="background" value="Content Creation" />Content Creator</label>
+            <label class="pill-o"><input type="radio" name="background" value="Design / Art" />Desain / Seni</label>
+            <label class="pill-o"><input type="radio" name="background" value="Sustainability / Environment" />Keberlanjutan</label>
+            <label class="pill-o"><input type="radio" name="background" value="Other" />Lainnya</label>
+          </div>
+          <input type="text" name="background_detail" id="bg-other-text" class="fi" placeholder="Ceritakan bidangmu..." style="display:none;margin-top:10px;" />
+        </div>
+
+        <div class="fg">
+          <label class="fl">Level menyelam scuba <span>*</span></label>
+          <div class="pills">
+            <label class="pill-o"><input type="radio" name="dive_level" value="No cert — will get OW in Bali" required />No cert — I’ll get OW in Bali</label>
+            <label class="pill-o"><input type="radio" name="dive_level" value="Open Water" />Open Water</label>
+            <label class="pill-o"><input type="radio" name="dive_level" value="Advanced Open Water" />Advanced OW</label>
+            <label class="pill-o"><input type="radio" name="dive_level" value="Rescue / DM / Instructor" />Rescue / DM+</label>
+          </div>
+        </div>
+
+        <div class="f-row">
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl" for="arrival">Rencana kedatangan <span>*</span></label>
+            <input type="month" name="arrival" id="arrival" class="fi" required />
+          </div>
+          <div class="fg" style="margin-bottom:0">
+            <label class="fl">Durasi <span>*</span></label>
+            <div class="pills">
+              <label class="pill-o"><input type="radio" name="duration" value="2 weeks" required />2 minggu</label>
+              <label class="pill-o"><input type="radio" name="duration" value="3 weeks" />3 minggu</label>
+              <label class="pill-o"><input type="radio" name="duration" value="1 month" />1 bulan</label>
+              <label class="pill-o"><input type="radio" name="duration" value="Longer" />Lebih lama</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="fg" style="margin-top:20px;">
+          <label class="fl">Preferensi akomodasi</label>
+          <div class="pills">
+            <label class="pill-o"><input type="radio" name="accommodation" value="Shared room (4 people, bunk beds)" />Kamar bersama — 4 orang</label>
+            <label class="pill-o"><input type="radio" name="accommodation" value="Private room" />Kamar pribadi</label>
+            <label class="pill-o"><input type="radio" name="accommodation" value="Villa room (+surcharge)" />Kamar vila · +biaya tambahan</label>
+          </div>
+          <p style="font-size:.75rem;color:var(--ink-soft);margin-top:8px;line-height:1.5;">Kamar bersama termasuk dalam harga program. Kamar pribadi dan kamar vila tersedia dengan biaya tambahan — kami akan membagikan harga tepat saat kami membalas.</p>
+        </div>
+
+        <div class="fg" style="margin-top:20px;">
+          <label class="fl" for="note">Ada yang ingin ditambahkan? <span style="opacity:.45;text-transform:none;letter-spacing:0;font-weight:400;">(opsional)</span></label>
+          <textarea name="note" id="note" class="fi" placeholder="Beberapa kalimat sudah cukup." maxlength="400"></textarea>
+        </div>
+
+        <button type="submit" class="f-submit">Kirim Lamaran →</button>
+        <p class="f-note">Kami membalas secara personal dalam 24–48 jam.<br/>Tidak ada spam — hanya percakapan nyata.</p>
+      </form>
+      <div class="f-success" id="formSuccess" style="display:none;">
+        <div class="ico">🪸</div>
+        <h3>Lamaran terkirim!</h3>
+        <p>Thank you! We’ll write back to your email within 24–48 hours.</p>
+      </div>
+    </div>
+    <p style="margin-top:26px;text-align:center;font-size:.84rem;color:var(--ink-soft);">
+      Pertanyaan cepat? <a href="mailto:coralsense.bali@gmail.com?subject=Internship%20Application%20%E2%80%94%20Coral%20Sense" style="color:var(--coral);font-weight:600;">coralsense.bali@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-intro">
+      <div><span class="eyebrow">FAQ</span><h2 class="serif">Pertanyaan yang paling sering kami dengar.</h2></div>
+      <div></div>
+    </div>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Apakah saya perlu latar belakang biologi kelautan?<span class="faq-plus">+</span></button><div class="faq-a"><p>Untuk Discovery: sama sekali tidak. Latar belakang apa pun, profesi apa pun. Untuk Research: latar belakang akademis di biologi kelautan, konservasi, atau bidang terkait penting, karena program ini dibangun di sekitar pembelajaran lapangan dan pengembangan profesional.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Saya tidak punya sertifikat Open Water. Apakah saya masih bisa datang?<span class="faq-plus">+</span></button><div class="faq-a"><p>Ya. Open Water diperlukan untuk bagian di dalam air, tetapi kamu bisa menyelesaikannya secara lokal di Bali sebelum program atau di hari-hari pertama setelah tiba (~$320–350). Untuk Discovery ada juga opsi partisipasi dari permukaan.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Apakah ini posisi berbayar?<span class="faq-plus">+</span></button><div class="faq-a"><p>Tidak. Ini adalah magang berbasis biaya — peserta membayar untuk program dan menerima pengalaman lapangan terstruktur, penyelaman, akomodasi, pelatihan, dan dukungan sebagai imbalannya.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Apa yang tidak termasuk dalam harga?<span class="faq-plus">+</span></button><div class="faq-a"><p>Penerbangan, visa, asuransi perjalanan, makan di luar makan siang hari selam yang termasuk, sewa skuter, kartu SIM, dan pengeluaran pribadi. Makan di warung lokal ~$1–3. Kafe bergaya Eropa ~$4–9.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Bagaimana cara dari bandara ke Coral House?<span class="faq-plus">+</span></button><div class="faq-a"><p>Transfer bandara termasuk dalam kedua program. Sopir Coral Sense menjemputmu di Denpasar dan membawamu ke Coral House — sekitar 2,5 jam.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Apakah saya perlu bisa mengendarai skuter?<span class="faq-plus">+</span></button><div class="faq-a"><p>Skuter (motor) adalah cara utama untuk berkeliling Bali Timur dan kami sangat merekomendasikan kemampuan mengendarainya. Karena makan tidak termasuk dalam program, kamu ingin kebebasan untuk pergi ke kafe, pasar, dan tempat lokal sendiri. Jika kamu tidak mengendarai skuter, taksi tersedia dan mudah dipesan. Kami juga bisa membantu mengatur mobil dengan sopir untuk tinggal penuhmu — cukup hubungi kami langsung dan kami akan menemukan solusi yang tepat untukmu.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="c-strip">
+  <div style="max-width:540px;margin:0 auto;">
+    <h2>Masih ada pertanyaan?</h2>
+    <p class="lead">Kami senang berbicara sebelum kamu mendaftar.<br/>Hubungi kami — kami membalas secara personal.</p>
+    <div class="c-btns">
+      <a href="mailto:coralsense.bali@gmail.com?subject=Internship%20Application%20%E2%80%94%20Coral%20Sense" class="btn btn-primary">Email kami</a>
+      <a href="#apply" class="btn btn-ghost">Daftar Sekarang</a>
+    </div>
+    <div class="c-links">
+      <a href="https://www.instagram.com/coralsense.bali/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>@coralsense.bali</a>
+      <a href="mailto:coralsense.bali@gmail.com?subject=Internship%20Application%20%E2%80%94%20Coral%20Sense" style="display:inline-flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>coralsense.bali@gmail.com</a>
+      <a href="https://www.coralrestorationbali.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>coralsense.bali</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="assets/editable/logo-white.png" alt="Coral Sense" style="height:28px;width:auto;opacity:.75;" />
+    <span>Coral Sense · Bali Timur, Indonesia · Segitiga Terumbu Karang</span>
+  </div>
+  <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;">
+    <a href="https://www.instagram.com/coralsense.bali/" target="_blank" rel="noopener">Instagram @coralsense.bali</a>
+    <a href="mailto:coralsense.bali@gmail.com?subject=Internship%20Application%20%E2%80%94%20Coral%20Sense">coralsense.bali@gmail.com</a>
+    <a href="https://www.coralrestorationbali.com/" target="_blank" rel="noopener">coralsense.bali</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.pills').forEach(group=>{
+  group.querySelectorAll('.pill-o').forEach(pill=>{
+    pill.addEventListener('click',()=>{
+      const r=pill.querySelector('input[type="radio"]');
+      if(r){group.querySelectorAll('.pill-o').forEach(p=>p.classList.remove('on'));pill.classList.add('on');}
+    });
+  });
+});
+document.querySelectorAll('input[name="background"]').forEach(r=>{
+  r.addEventListener('change',()=>{document.getElementById('bg-other-text').style.display=r.value==='Other'?'block':'none';});
+});
+document.querySelectorAll('input[name="studying"]').forEach(r=>{
+  r.addEventListener('change',()=>{document.getElementById('study-text').style.display=r.value==='Yes'?'block':'none';});
+});
+document.getElementById('email').addEventListener('input',function(){document.getElementById('replyto-field').value=this.value;});
+const form=document.getElementById('appForm');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();const btn=form.querySelector('.f-submit');
+  btn.textContent='Mengirim…';btn.disabled=true;
+  try{
+    const fd=new FormData(form);
+    const res=await fetch('https://formspree.io/f/xkoaazby',{method:'POST',headers:{'Accept':'application/json'},body:fd});
+    if(res.ok){form.style.display='none';document.getElementById('formSuccess').style.display='block';}
+    else{btn.textContent='Terjadi kesalahan — coba lagi';btn.disabled=false;}
+  }catch{btn.textContent='Terjadi kesalahan — coba lagi';btn.disabled=false;}
+});
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const open=btn.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.faq-q').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.style.display='none';});
+    if(!open){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.style.display='block';}
+  });
+});
+</script>
 </body>
 </html>
