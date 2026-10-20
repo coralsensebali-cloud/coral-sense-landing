@@ -248,3 +248,20 @@ footer a:hover{color:var(--cream)}
 
 @media(max-width:480px){.tabs{gap:5px}.tab{padding:6px 10px;font-size:.72rem}}
 .best{display:inline-block;margin-left:6px;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral);border:1px solid var(--coral);border-radius:999px;padding:2px 8px;vertical-align:middle}
+
+/* explore cards (cross-links between tabs) */
+.xsec{background:var(--cream)}
+.xgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,20px);margin-top:clamp(22px,3vw,32px)}
+@media(max-width:640px){.xgrid{grid-template-columns:1fr}}
+.xcard{display:grid;grid-template-columns:120px 1fr;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.xcard:hover{box-shadow:0 8px 30px rgba(13,27,42,.1);transform:translateY(-2px)}
+.xcard img{width:120px;height:100%;min-height:140px;object-fit:cover}
+.xbody{padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.xbody b{font-size:1.05rem}.xbody span{font-size:.86rem;color:var(--ink-soft);line-height:1.5}
+.xbody em{font-style:normal;font-weight:700;font-size:.84rem;color:var(--coral);margin-top:auto;padding-top:6px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin-top:18px;font-size:.8rem;color:var(--ink-soft)}
+.trust span::before{content:"✓ ";color:var(--coral);font-weight:800}
+.dark .trust,.hero .trust,.phero .trust{color:rgba(245,241,236,.8);justify-content:flex-start}
+
+@media(max-width:480px){.tsub{display:none}.tab{padding:7px 13px;font-size:.78rem}}
+@media(max-width:380px){.tab{padding:6px 10px;font-size:.74rem}}
