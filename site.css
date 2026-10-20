@@ -366,3 +366,19 @@ details.more .wk-n{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-tr
   .home-hero .hero-content{order:1;align-self:center;padding:clamp(40px,6vw,90px) var(--pad)}
 }
 .hero h1{font-size:clamp(2.3rem,6.4vw,4.6rem);max-width:17ch}
+
+.rv-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:900px}
+.hero-img{object-position:24% 50%}
+.cap-fig{margin:0}
+.cap-fig figcaption{margin-top:12px;font-size:.95rem;color:var(--ink-soft);max-width:62ch}
+.cap-fig figcaption b{color:var(--ink)}
+.spots{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:760px){.spots{grid-template-columns:1fr 1fr}}
+.spots li{margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.spots b{font-size:.95rem}.spots span{font-size:.84rem;color:var(--ink-soft)}
+@media(max-width:760px){
+  .hero{min-height:0;display:block;background:var(--deep)}
+  .hero .hero-img{position:static;width:100%;height:auto;opacity:1;object-fit:contain}
+  .hero .hero-overlay{display:none}
+  .hero .hero-content{padding-top:26px;padding-bottom:36px}
+}
