@@ -280,3 +280,15 @@ footer a:hover{color:var(--cream)}
 .rv-sec .btn-outline{color:var(--cream);border-color:rgba(245,241,236,.5)}
 .rv-sec .btn-outline:hover{background:var(--cream);color:var(--ink)}
 .rv-sec .btn{white-space:normal;max-width:100%}
+
+/* uncropped photo rows: each photo keeps its own shape, rows always full */
+.pgrid-wrap{margin-top:clamp(28px,4vw,48px)}
+.marquee-grid,.house-grid,.gallery,.five-grid,.community-row{display:none}
+.pgrid{display:flex;flex-direction:column;gap:8px}
+.prow{display:flex;gap:8px;align-items:flex-start}
+.prow img{min-width:0;width:100%;height:auto;border-radius:var(--r);display:block}
+.prow.one{justify-content:center}.prow.one img{max-width:420px}
+section.flush .pgrid-wrap{margin:0;padding:6px;background:var(--cream)}
+.pb.pb-h{aspect-ratio:auto;height:auto}
+.pb.pb-v{aspect-ratio:auto;width:auto;max-width:100%;max-height:85vh;margin:0 auto;object-fit:contain}
+section.flush:has(.pb-v){background:var(--deep);text-align:center}
