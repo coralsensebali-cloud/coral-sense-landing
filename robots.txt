@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /crm.html
+Sitemap: https://coralsensebali-cloud.github.io/coral-sense-landing/sitemap.xml

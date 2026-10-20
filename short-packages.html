@@ -1,184 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coral Sense | Short Experience — 2 Days in Bali</title>
-  <meta name="description" content="A 2-day coral restoration experience in Bali. 4 dives at our Amed reef garden — real hands-on work, no long-term commitment required.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .nav-tabs-bar { border-bottom: 1px solid var(--line); }
-    .nav-tabs { display:flex; gap:6px; padding:10px 0; flex-wrap:wrap; }
-    .nav-tab { padding:7px 18px; border-radius:100px; font-size:.82rem; font-weight:500; text-decoration:none; color:var(--ink-soft); border:1px solid var(--line); transition:all .18s; }
-    .nav-tab:hover { background:var(--card); color:var(--ink); }
-    .nav-tab.active { background:var(--ink); color:var(--bg); border-color:var(--ink); }
-    .short-hero { padding: clamp(48px, 8vw, 96px) 0 clamp(32px, 5vw, 56px); }
-    .short-hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.12; max-width: 18ch; margin-bottom: 20px; }
-    .short-hero .sub { max-width: 54ch; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.62; margin-bottom: 32px; }
-    .day-timeline { display:flex; flex-direction:column; gap:0; margin-top:14px; }
-    .day-item { display:grid; grid-template-columns:90px 1fr; gap:20px; padding:20px 0; border-bottom:1px solid var(--line); }
-    .day-item:last-child { border-bottom:none; }
-    .day-label { font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); padding-top:2px; }
-    .day-content h4 { font-size:.98rem; font-weight:600; margin-bottom:6px; }
-    .day-content p { font-size:.88rem; color:var(--ink-soft); line-height:1.56; margin:0; }
-    .price-compare { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:14px; }
-    @media (max-width:600px) { .price-compare { grid-template-columns:1fr; } }
-    .price-option { border:1px solid var(--line); border-radius:var(--r); padding:clamp(20px,4vw,32px); }
-    .price-option.featured { border-color:var(--accent); background:var(--card); }
-    .price-option .label { font-size:.78rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); margin-bottom:10px; }
-    .price-option .label.accent { color:var(--accent); }
-    .price-option .amount { font-size:2.2rem; font-weight:700; line-height:1.1; margin-bottom:4px; }
-    .price-option .idr { font-size:.88rem; color:var(--ink-soft); margin-bottom:16px; }
-    .price-option p { font-size:.9rem; color:var(--ink-soft); line-height:1.56; }
-    .what-block { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:14px; }
-    @media (max-width:640px) { .what-block { grid-template-columns:1fr; } }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Coral Restoration Day in Amed, Bali | 1–2 Day Dive Experience | Coral Sense</title>
+<meta name="description" content="Only in Bali for a day or two? Join a Coral Restoration Day in Amed: plant corals on your dives, lunch, gear and Ocean Impact Certificate included. Scuba from $88, snorkeling and freediving from $47." />
+<meta name="keywords" content="coral restoration Bali, coral restoration Amed, Amed diving, things to do in Amed, things to do in Bali, coral planting dive Bali, eco tourism Bali, marine conservation Bali, Amed dive day" />
+<link rel="canonical" href="https://coralsensebali-cloud.github.io/coral-sense-landing/short-packages.html" />
+<meta name="theme-color" content="#f5f1ec" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Coral Restoration Day in Amed, Bali | Coral Sense" />
+<meta property="og:description" content="Plant corals on your dives in Amed. 1 or 2 days, gear, lunch and certificate included." />
+<meta property="og:image" content="https://coralsensebali-cloud.github.io/coral-sense-landing/assets/editable/site-amed.jpg" />
+<meta property="og:url" content="https://coralsensebali-cloud.github.io/coral-sense-landing/short-packages.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="site.css" />
+<style>
+.ph-flex{display:flex;gap:8px;margin-top:8px}
+.ph-flex img{min-width:0;height:auto;border-radius:var(--r);width:100%}
+@media(max-width:600px){.ph-flex.wrap3{flex-wrap:wrap}.ph-flex.wrap3 img{flex-basis:calc(50% - 4px)!important}.ph-flex.wrap3 img:nth-child(3){flex-basis:100%!important}}
+.day{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:center}
+@media(max-width:860px){.day{grid-template-columns:1fr}}
+.tl{list-style:none;padding:0;margin:0}
+.tl li{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);margin:0}
+.tl li:last-child{border-bottom:none}
+.tl .t{font-size:.78rem;font-weight:700;letter-spacing:.08em;color:var(--coral);padding-top:2px}
+.tl b{display:block;font-size:.98rem}
+.tl span{font-size:.88rem;color:var(--ink-soft)}
+.pr .alt{font-size:.9rem;font-weight:700;margin-top:4px}
+.pr .alt small{font-weight:500;color:var(--ink-soft)}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Coral Restoration Day in Amed, Bali",
+  "serviceType":"Coral restoration dive experience",
+  "provider":{"@type":"Organization","name":"Coral Sense","url":"https://coralsensebali-cloud.github.io/coral-sense-landing/","sameAs":["https://www.instagram.com/coralsense.bali/"]},
+  "areaServed":{"@type":"Place","name":"Amed, Bali, Indonesia"},
+  "description":"A full day of scuba diving at the Coral Sense coral restoration garden in Amed: coral talk, coral planting dives, lunch, gear, and an Ocean Impact Certificate.",
+  "offers":[
+    {"@type":"Offer","name":"1 day, 1 dive","price":"88","priceCurrency":"USD"},
+    {"@type":"Offer","name":"1 day, 2 dives","price":"100","priceCurrency":"USD"},
+    {"@type":"Offer","name":"2 days, 4 dives","price":"200","priceCurrency":"USD"},
+    {"@type":"Offer","name":"2 days, 4 dives + 2 nights at Coral Home","price":"240","priceCurrency":"USD"},
+    {"@type":"Offer","name":"Snorkeling or freediving Coral Day (min. 3 people)","price":"47","priceCurrency":"USD"}
+  ]
+}
+</script>
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <div class="topbar-inner">
-        <a class="brand" href="index.html">
-          <img src="assets/logo-white.webp" alt="Coral Sense logo">
-          <span>Coral Sense</span>
-        </a>
-        <div class="top-links">
-          <a href="https://www.instagram.com/coralsense.bali/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-      </div>
-    </header>
 
-    <div class="nav-tabs-bar">
-      <div class="wrap nav-tabs">
-        <a class="nav-tab" href="index.html">Internship (1+ month)</a>
-        <a class="nav-tab active" href="short-packages.html">Short Stay (2 days)</a>
+<a class="wa" href="https://wa.me/6281248368288?text=Hi%20Coral%20Sense!%20I'm%20interested%20in%20a%20Coral%20Restoration%20Day." target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html"><img src="assets/editable/logo-black.png" alt="Coral Sense" />Coral Sense</a>
+    <div class="nav-links">
+      <a href="#day">Your day</a><a href="#prices">Prices</a><a href="#included">Included</a><a href="#no-dive">Snorkel</a><a href="coral-home.html">Coral Home</a>
+    </div>
+    <a href="#prices" class="btn btn-primary" style="padding:9px 22px;font-size:.84rem;">Choose a day</a>
+  </div>
+  <div class="tabs"><a class="tab" href="index.html">Internships · 1 week+</a><a class="tab active" href="short-packages.html">Short Stay · 1–2 days</a><a class="tab" href="coral-home.html">Coral Home</a></div>
+</nav>
+
+<header class="phero">
+  <picture>
+    <source media="(max-aspect-ratio: 1/1)" srcset="assets/editable/disc-gal-3.jpg" />
+    <img src="assets/editable/site-amed.jpg" alt="Divers planting corals at the Coral Sense restoration garden in Amed, Bali" fetchpriority="high" />
+  </picture>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Coral Restoration Day · Amed · East Bali</span>
+    <h1>Only a day or two in Bali? Spend it on the reef.</h1>
+    <p class="sub">Dive with us in Amed and plant corals with your own hands. No long stay needed. You leave with salt in your hair and a few new corals on the reef.</p>
+    <div class="hero-btns">
+      <a href="#prices" class="btn btn-primary">See prices</a>
+      <a href="#day" class="btn btn-ghost">How the day goes</a>
+    </div>
+  </div>
+</header>
+
+<!-- THE DAY -->
+<section id="day">
+  <div class="wrap">
+    <div class="day">
+      <div>
+        <span class="eyebrow">A full day, 9:00 to 19:00</span>
+        <h2 class="serif">Every day on the reef is a little different.</h2>
+        <p class="lead" style="margin-bottom:22px;">The reef decides what needs doing today. Sometimes it's planting, sometimes rescuing broken corals, sometimes caring for the structures.</p>
+        <ul class="tl">
+          <li><span class="t">Morning</span><div><b>Coral Talk</b><span>Coral science in simple words. Why reefs matter and what we do for them.</span></div></li>
+          <li><span class="t">Dive 1</span><div><b>Into the garden</b><span>Coral planting, saving broken fragments, reef care.</span></div></li>
+          <li><span class="t">Midday</span><div><b>Lunch and rest</b><span>Good food, a break, time to talk about what you saw.</span></div></li>
+          <li><span class="t">Dive 2</span><div><b>A new task</b><span>A different job underwater. With the 1-dive option, you skip this one.</span></div></li>
+          <li><span class="t">Evening</span><div><b>Sunset</b><span>One of the best volcano views on the island. You get photos and your Ocean Impact Certificate.</span></div></li>
+        </ul>
+      </div>
+      <img src="assets/editable/disc-gal-2.jpg" alt="Coral Sense divers walking to the coral garden in Amed with Mount Agung behind" style="width:100%;height:auto;border-radius:var(--r)" loading="lazy" width="1060" height="1484" />
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section id="prices" class="soft">
+  <div class="wrap">
+    <span class="eyebrow">Choose your day</span>
+    <h2 class="serif">One day or two.</h2>
+    <p class="lead">Each option is a full day program. Gear, materials, lunch and the certificate are always included.</p>
+    <div class="pr-grid">
+      <div class="pr">
+        <div class="lbl">1 day · 1 dive</div>
+        <h3>A first taste</h3>
+        <div class="amt">$88</div>
+        <p>Coral Talk, one restoration dive, lunch and sunset. Good if you want to try it calmly.</p>
+        <a href="https://wa.me/6281248368288?text=Hi%20Coral%20Sense!%20I'm%20interested%20in%201%20day%2C%201%20dive." target="_blank" rel="noopener" class="btn btn-outline btn-full" style="margin-top:18px;">Ask about dates</a>
+      </div>
+      <div class="pr feat-pr">
+        <div class="lbl">1 day · 2 dives</div>
+        <h3>The full Coral Day</h3>
+        <div class="amt">$100</div>
+        <p>Two dives with two different tasks. The full rhythm of our team's day.</p>
+        <a href="https://wa.me/6281248368288?text=Hi%20Coral%20Sense!%20I'm%20interested%20in%201%20day%2C%202%20dives." target="_blank" rel="noopener" class="btn btn-primary btn-full" style="margin-top:18px;">Ask about dates</a>
+      </div>
+      <div class="pr">
+        <div class="lbl">2 days · 4 dives</div>
+        <h3>Go a bit deeper</h3>
+        <div class="amt">$200</div>
+        <div class="alt">$240 <small>with 2 nights at <a href="coral-home.html" style="text-decoration:underline">Coral Home</a></small></div>
+        <p style="margin-top:8px;">Day two builds on day one. More confidence underwater, more time with the reef.</p>
+        <a href="https://wa.me/6281248368288?text=Hi%20Coral%20Sense!%20I'm%20interested%20in%202%20days%2C%204%20dives." target="_blank" rel="noopener" class="btn btn-outline btn-full" style="margin-top:18px;">Ask about dates</a>
       </div>
     </div>
-
-    <main>
-
-      <section class="short-hero">
-        <div class="wrap">
-          <div class="kicker">Short Experience</div>
-          <h1>Just visiting Bali for a couple of days?</h1>
-          <p class="sub">Two days at our coral restoration garden in Amed. Four dives, real hands-on work — coral planting, reef care, maintenance. No long-term commitment, no tourist dive format.</p>
-          <div class="cta-row">
-            <a class="button" href="https://wa.me/6281248368288?text=Hello%20Coral%20Sense%2C%20I'm%20interested%20in%20the%202-day%20short%20experience." target="_blank" rel="noopener noreferrer">Ask About Dates</a>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <div class="section-head">
-            <div class="kicker">2 Days / 4 Dives</div>
-            <h2>Two full dive days at our Amed garden.</h2>
-            <p>Each day follows the same rhythm as a regular program day — morning briefing, two dives, lunch, debrief. You join the team and do what the team does.</p>
-          </div>
-          <div class="day-timeline">
-            <div class="day-item">
-              <div class="day-label">Day 1</div>
-              <div class="day-content">
-                <h4>Coral Restoration — Amed Garden</h4>
-                <p>First day in the water. Morning coral talk, two guided dives at our Amed site. Coral planting, maintenance of structures, reef care. Lunch included. By the end of day one you already know how the site works.</p>
-              </div>
-            </div>
-            <div class="day-item">
-              <div class="day-label">Day 2</div>
-              <div class="day-content">
-                <h4>Deeper Into the Reef</h4>
-                <p>Second day builds on the first. Two more dives — different tasks, more confidence underwater, more time with the reef. You finish with an Ocean Impact Certificate and a clear sense of what coral restoration actually looks like in practice.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <div class="what-block">
-            <div class="card soft">
-              <div class="kicker">What You'll Do</div>
-              <ul class="facts">
-                <li>Coral maintenance and care of underwater structures</li>
-                <li>Rescue of broken coral fragments</li>
-                <li>Coral fragmentation and preparation</li>
-                <li>Coral planting on restoration sites</li>
-                <li>Collecting basic research data</li>
-              </ul>
-            </div>
-            <div class="card">
-              <div class="kicker">What's Included</div>
-              <ul class="facts">
-                <li>4 scuba dives at Amed coral garden</li>
-                <li>Full dive equipment</li>
-                <li>Coral restoration materials</li>
-                <li>Coral Conservation Training</li>
-                <li>Lunch on both dive days</li>
-                <li>Coral Sense t-shirt</li>
-                <li>Ocean Impact Certificate</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <div class="section-head">
-            <div class="kicker">Pricing</div>
-            <h2>With or without accommodation.</h2>
-            <p>The experience is exactly the same. The only difference is whether you sleep at Coral House or make your own arrangements in Amed.</p>
-          </div>
-          <div class="price-compare">
-            <div class="price-option">
-              <div class="label">Without accommodation</div>
-              <div class="amount">$200</div>
-              <div class="idr">3,200,000 IDR</div>
-              <p>2 days, 4 dives. You arrange your own place in Amed. Good if you're already staying somewhere or prefer flexibility.</p>
-            </div>
-            <div class="price-option featured">
-              <div class="label accent">With accommodation</div>
-              <div class="amount">$240</div>
-              <div class="idr">3,800,000 IDR</div>
-              <p>Same 2-day dive experience plus 2 nights at Coral House, shared room. Wake up, gear up, walk to the water.</p>
-            </div>
-          </div>
-          <div class="card soft" style="margin-top:16px">
-            <div class="kicker">Good to know</div>
-            <ul class="facts">
-              <li>This experience is for certified divers. Open Water is the minimum required to join the water sessions.</li>
-              <li>Dates are flexible — message us on WhatsApp and we'll find a slot that works.</li>
-              <li>A good way to try coral restoration before committing to a full month program.</li>
-            </ul>
-          </div>
-          <div class="cta-row" style="margin-top:32px">
-            <a class="button" href="https://wa.me/6281248368288?text=Hello%20Coral%20Sense%2C%20I'm%20interested%20in%20the%202-day%20short%20experience." target="_blank" rel="noopener noreferrer">Message Us on WhatsApp</a>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <div class="quote-panel">
-            <div class="kicker">Thinking about a full month?</div>
-            <div class="quote">The short experience is also a good way to feel the project before committing to a longer stay.</div>
-            <p class="sub" style="margin-top:14px">Our monthly programs are open year-round. Discovery starts at $1,380 / month. Marine Biology Research at $1,780 / month.</p>
-            <div class="cta-row" style="margin-top:24px">
-              <a class="button secondary" href="index.html">See Full Internship Programs →</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="footer">
-      Coral Sense / Internships in Bali / Marine Conservation, Coral Restoration, and Research Participation
-    </footer>
+    <p class="note">Dates are flexible. Message us on WhatsApp and we'll find a day that works for you.</p>
   </div>
+</section>
+
+<!-- INCLUDED -->
+<section id="included">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">What you'll do</span>
+        <h3>Real restoration, not a fun dive.</h3>
+        <ul style="margin-top:14px;">
+          <li>Plant corals on restoration structures</li>
+          <li>Rescue broken coral fragments</li>
+          <li>Prepare coral fragments for planting</li>
+          <li>Clean and care for the underwater structures</li>
+          <li>Collect simple research data</li>
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">What's included</span>
+        <h3>You just bring a swimsuit.</h3>
+        <ul style="margin-top:14px;">
+          <li>Scuba dives at our Amed coral garden</li>
+          <li>Full dive gear</li>
+          <li>Coral restoration materials</li>
+          <li>Coral Talk, a short coral science session</li>
+          <li>Lunch on every dive day</li>
+          <li>Photos and an Ocean Impact Certificate</li>
+        </ul>
+        <p style="margin-top:14px;font-size:.88rem;color:var(--ink-soft);">Good to know: these are scuba programs, so you need an Open Water certificate. Not a diver? <a href="#no-dive" style="color:var(--coral);font-weight:600;">See snorkeling and freediving</a>.</p>
+      </div>
+    </div>
+    <div class="ph-flex wrap3" style="margin-top:clamp(36px,5vw,56px);">
+      <img src="assets/editable/disc-gal-1.jpg" alt="Diver checking coral growth on a restoration structure in Amed" style="flex:0.574" loading="lazy" width="950" height="1656" />
+      <img src="assets/editable/comm-1.jpg" alt="Hands attaching coral fragments to a restoration frame" style="flex:0.639" loading="lazy" width="1002" height="1569" />
+      <img src="assets/editable/closing-1.jpg" alt="Coral Sense team smiling after a dive in Amed" style="flex:0.75" loading="lazy" width="1050" height="1400" />
+    </div>
+  </div>
+</section>
+
+<!-- NO DIVE LICENSE -->
+<section id="no-dive" class="soft">
+  <div class="wrap">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Not a diver?</span>
+        <h2 class="serif">Snorkel or freedive with us.</h2>
+      </div>
+      <div>
+        <p class="lead">No dive license, no problem. We also run Coral Restoration Days for snorkelers and freedivers. You still help the reef with your own hands, just from the surface or on one breath.</p>
+        <div class="pr" style="margin-top:22px;max-width:420px;">
+          <div class="lbl">Snorkeling or freediving · 1 day</div>
+          <div class="amt">from $47</div>
+          <p>For groups of 3 people or more.</p>
+          <a href="https://wa.me/6281248368288?text=Hi%20Coral%20Sense!%20I'm%20interested%20in%20a%20snorkeling%20or%20freediving%20Coral%20Day." target="_blank" rel="noopener" class="btn btn-outline btn-full" style="margin-top:18px;">Ask about dates</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WANT MORE -->
+<section>
+  <div class="wrap" style="text-align:center;">
+    <span class="eyebrow">Want more time with the reef?</span>
+    <h2 class="serif" style="max-width:20ch;margin-left:auto;margin-right:auto;">Stay a week. Or a whole month.</h2>
+    <p class="lead" style="margin:0 auto 28px;">Our internships start from 1 week. You dive every week, learn how a real restoration project works, and live at Coral Home next to the garden.</p>
+    <div class="hero-btns" style="justify-content:center;">
+      <a href="index.html#programs" class="btn btn-primary">See internships</a>
+      <a href="coral-home.html" class="btn btn-outline">See Coral Home</a>
+    </div>
+  </div>
+</section>
+
+<div class="c-strip">
+  <div style="max-width:540px;margin:0 auto;">
+    <h2>Still have questions?</h2>
+    <p class="lead">Write to us. A real person will answer.</p>
+    <div class="c-btns">
+      <a href="https://wa.me/6281248368288?text=Hi%20Coral%20Sense!%20I%20have%20a%20question." target="_blank" rel="noopener" class="btn wa-btn">WhatsApp</a>
+      <a href="mailto:coralsense.bali@gmail.com" class="btn btn-ghost">Email us</a>
+    </div>
+    <div class="c-links">
+      <a href="https://www.instagram.com/coralsense.bali/" target="_blank" rel="noopener">@coralsense.bali</a>
+      <a href="mailto:coralsense.bali@gmail.com">coralsense.bali@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="assets/editable/logo-white.png" alt="Coral Sense" style="height:28px;width:auto;opacity:.75;" />
+    <span>Coral Sense · Coral restoration in Amed, East Bali · Coral Triangle</span>
+  </div>
+  <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;">
+    <a href="index.html">Internships</a><a href="short-packages.html">Short Stay</a><a href="coral-home.html">Coral Home</a>
+  </div>
+</footer>
 </body>
 </html>
