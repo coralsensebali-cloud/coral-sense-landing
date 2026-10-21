@@ -407,3 +407,11 @@ details.more .wk-n{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-tr
 .foot-links{display:flex;gap:16px;flex-wrap:wrap}
 @media(max-width:480px){.tab{padding:6px 11px;font-size:.76rem}}
 @media(max-width:560px){.tabs{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:28px}}
+/* shared helpers now used on EN pages too */
+h1,h2{text-wrap:balance}
+.fit{font-weight:700;color:var(--ink)!important;background:var(--cream-soft);border-left:3px solid var(--coral);padding:8px 12px;border-radius:0 6px 6px 0;margin:6px 0!important}
+.family{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-top:20px}
+.family h3{margin:0 0 8px}.family p{margin:0;color:var(--ink-soft);font-size:.95rem}
+.dark .family{background:rgba(255,255,255,.06);border-color:var(--line-d)}
+.custom{margin-top:20px;background:var(--deep);color:var(--cream);border-radius:10px;padding:20px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.custom p{margin:0;color:rgba(245,241,236,.85);max-width:52ch}
